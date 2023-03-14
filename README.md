@@ -3,7 +3,7 @@
 ## Git 
 ### Adding your SSH key to the ssh-agent
 
-1. Start the ssh-agent in the background.
+1. Comenzar el ssh-agent en segundo plano
 ```shell
 eval "$(ssh-agent -s)"
 ```
