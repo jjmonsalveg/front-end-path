@@ -1,6 +1,16 @@
 # Front end path
 
 ## Git 
+
+### Instalacion
+
+#### Mac(Jose)
+
+#### Ubuntu(Juan)
+
+### Configuracion(Vicky)
+
+### Comandos(3 por persona)
 ### Añadiendo ssh keys al ssh-agent
 
 1. Comenzar el ssh-agent en segundo plano
@@ -31,3 +41,18 @@ chmod  600 ~/.ssh/config
 ```shell
 ssh-add --apple-use-keychain  ~/.ssh/github
 ```
+
+
+## Recursos y referencias(Lo que consigan)
+
+### Git
+
+
+### videos
+
+
+### Markdown
+
+
+
+## Glosario (lo que consigan)
