@@ -38,7 +38,22 @@ Debe salirte la version de git instalada. ejemplo: **git version 2.9.2**
 
 
 
-### Configuracion(Vicky)
+### Configuracion
+
+1. Copiar y pegar en tu terminal editando tu username e email:
+```
+git config --global core.editor "vim"
+ git config --global push.default upstream
+ git config --global merge.conflictstyle diff3
+ git config --global user.name "tu-username>"
+ git config --global user.email "tu-email"
+ git config --global push.default current
+```
+
+2. Chequear datos con el siguiente comando:
+```
+git config --list
+```
 
 ### Comandos(3 por persona)
 
@@ -60,8 +75,18 @@ git status
 - **git grep:** Le permite al usuario buscar frases y palabras específicas en los árboles de confirmación, el directorio de trabajo y en el área de preparación.
 
 - **git log:** Se usa para ver el historial del repositorio listando ciertos detalles de la confirmación. 
-
-
+- **git checkout -b <nombre de tu nueva rama>:** Crea una nueva rama, y a la vez te lleva a ella. Mismo resultado que usar git branch <nombre de tu nueva rama> y git checkout <nombre de tu nueva rama>, pero con un solo comando.
+```
+git checkout -b <nombre de tu nueva rama>
+```
+- **git merge:** Permite fusionar una rama con otra 
+```
+git merge <nombre de la rama con la que quieres fusionar>
+```
+- **git push:** Carga el contenido de nuestro repositorio local (Visual Studio Code) a nuestro repositorio remoto asociado (Github)
+```
+git push
+```
 
 
 
@@ -127,6 +152,25 @@ ssh-add --apple-use-keychain  ~/.ssh/github
 
 - **¿Que es markdown?**
 Es una forma sencilla de agregar formato a textos en la web y funciona incorporando algunos caracteres a nuestro contenido.
+
+- **Bash y Zsh** 
+Bash (acrónimo de Bourne-Again Shell) es un intérprete de comandos y lenguaje de programación integrado que corre bajo el macroprocesador Shell de Unix. Este programa ejecuta una a una las órdenes que el usuario pone en una ventana de texto o las que se encuentran contenidas en un script o bash script (archivo con todas las instrucciones), para luego devolver los resultados.
+ZSH, también llamado Z shell, es una versión extendida de Bourne Shell (sh), con muchas características nuevas y soporte para plugins y temas. Dado que se basa en el mismo shell que Bash, ZSH tiene muchas de las mismas características. 
+
+- **Comando cd** 
+cd = change directory
+Este comando te ayuda a moverte o posicionarte dentro de los directorios (folders). Que es lo mismo que buscar folders dentro de Finder 
+
+- **Comando mkdir** 
+mkdir = Make a directory
+Al escribir este comando crearás un directorio ó folder.
+```
+mkdir <folder>
+```
+Cadena de folders:
+```
+mkdir -p <folder>/<folder>/<folder>/<folder>
+```
 
 
 
