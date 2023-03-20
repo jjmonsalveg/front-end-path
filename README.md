@@ -174,7 +174,7 @@ ssh-add --apple-use-keychain  ~/.ssh/github
 
 - **¿Que es un usuario root?**: Es una cuenta de usuario especial que no pertenece a ningún grupo de acceso, el usuario root puede visualizar, editar o utilizar cualquier objeto de datos en el sistema. 
 
-> **note**
+> **Note**
 > El usuario root es siempre un usuario de altos privilegios.
 
 - **¿Que es markdown?**
