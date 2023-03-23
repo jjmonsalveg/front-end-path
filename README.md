@@ -58,6 +58,7 @@ git config --list
 
 ### Comandos
 
+- **git init:**
 - **git add:** añade cambios de archivos en tu directorio. En el siguiente ejemplo se añaden todos los cambios realizados:
 
 ```shell
@@ -157,6 +158,25 @@ ssh-add --apple-use-keychain  ~/.ssh/github
 
 - [chuleta](https://www.markdownguide.org/cheat-sheet/)
 
+## HTML
+
+As the name HyperText Markup Language indicates, HTML is a markup
+language, which allows a web author to organize and define how content
+should be displayed. This means HTML can do things like add text formatting;
+make headings, lists, and tables; and include images and links.
+
+HTML source is plain text, which makes it ideal for editing with a text editor
+(as discussed in Learn Enough Text Editor to Be Dangerous). Instead of using
+the convenient but inflexible What You See Is What You Get (WYSIWYG)
+approach of word processors, HTML indicates formatting using special tags
+which are the text annotations alluded to above.
+As we’ll see, HTML supports more than one kind of tags, but the most
+common kind consist of strings (sequences of characters) enclosed in
+beginning and ending tags, like this:
+
+```html
+<strong>make them strong</strong>, but this one is outside
+```
 ## Glosario
 
 - **Comando whoami**: es un comando del tipo Unix, proviene de la concatenación de las palabras en inglés ¿Who am I? que significa, ¿Quién soy?. Es un comando simple, utilizado para imprimir el nombre de usuario efectivo del usuario actual cuando se invoca, que se entiende como el nombre del usuario en sesión.
