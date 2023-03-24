@@ -177,6 +177,44 @@ beginning and ending tags, like this:
 ```html
 <strong>make them strong</strong>, but this one is outside
 ```
+### History
+
+|     Year              |	   Version            |
+| -------------         |:-----------------------:|
+|1989|	Tim Berners-Lee invented www              |
+|1991|	Tim Berners-Lee invented HTML             |
+|1993|	Dave Raggett drafted HTML+ .              |
+|1995|	HTML Working Group defined HTML 2.0       |
+|1997|	W3C Recommendation: HTML 3.2 .            |
+|1999|	W3C Recommendation: HTML 4.01             |
+|2000|	W3C Recommendation: XHTML 1.0             |
+|2008|	WHATWG HTML5 First Public Draft           |
+|2012|	WHATWG HTML5 Living Standard              |
+|2014|	W3C Recommendation: HTML5                 |
+|2016|	W3C Candidate Recommendation: HTML 5.1    |
+|2017|	W3C Recommendation: HTML5.1 2nd Edition   |
+|2017|	W3C Recommendation: HTML5.2               |
+
+# Tags y notas
+
+```
+<html>	Defines the root of an HTML document
+<body>	Defines the document's body
+<h1> to <h6>	Defines HTML headings
+<p>	Defines a paragraph
+<hr>	Defines a thematic change in the content
+<br>	Inserts a single line break
+<pre>	Defines pre-formatted text
+
+- All HTML elements can have attributes
+- The href attribute of <a> specifies the URL of the page the link goes to
+- The src attribute of <img> specifies the path to the image to be displayed
+- The width and height attributes of <img> provide size information for images
+- The alt attribute of <img> provides an alternate text for an image
+- The style attribute is used to add styles to an element, such as color, font, size, and more
+- The lang attribute of the <html> tag declares the language of the Web page
+- The title attribute defines some extra information about an element
+```
 ## Glosario
 
 - **Comando whoami**: es un comando del tipo Unix, proviene de la concatenación de las palabras en inglés ¿Who am I? que significa, ¿Quién soy?. Es un comando simple, utilizado para imprimir el nombre de usuario efectivo del usuario actual cuando se invoca, que se entiende como el nombre del usuario en sesión.
