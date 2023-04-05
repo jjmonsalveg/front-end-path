@@ -260,3 +260,8 @@ padres no existan tambien los crea:
 ```shell
 mkdir -p <folder_p1>/<folder_p2>/<folder_p3>/<folder>
 ```
+
+## Herramientas
+
+- Edicion de imagenes gratuita https://evernote.com/products/skitch
+
