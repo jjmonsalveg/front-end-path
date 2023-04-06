@@ -5,3 +5,47 @@
 .nav-spacing {
     margin: 0 0 0 10px;
 }
+
+.image-link {
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.h1-spacing {
+    margin: 0 0 80px;
+}
+
+.image-left {
+    float: left;
+}
+
+.image-right {
+    margin: 0px 40px 0px 0px;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-20px {
+    font-size: 20px;
+}
+
+.text-normal {
+    font-style: normal;
+}
+
+.text-24px {
+    font-size: 24px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-red{
+    color: #ff0000;
+}
