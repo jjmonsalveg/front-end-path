@@ -215,6 +215,25 @@ beginning and ending tags, like this:
 - The lang attribute of the <html> tag declares the language of the Web page
 - The title attribute defines some extra information about an element
 ```
+
+### CSS
+
+
+#### Notas
+
+- borders (a line
+around the box), margins (the distance away from other boxes), and padding
+(empty space inside the box separating content from the border).
+
+- Elements that are considered inline elements, like span or a, are only allowed to
+have margins and padding applied to the left and right (not top or bottom), and
+they won’t accept a width or height set by CSS. None of these restrictions
+apply to block elements.
+
+<p align="center">
+  <img src="images/box_model.png">
+</p>
+
 ## Glosario
 
 - **Comando whoami**: es un comando del tipo Unix, proviene de la concatenación de las palabras en inglés ¿Who am I? que significa, ¿Quién soy?. Es un comando simple, utilizado para imprimir el nombre de usuario efectivo del usuario actual cuando se invoca, que se entiende como el nombre del usuario en sesión.
