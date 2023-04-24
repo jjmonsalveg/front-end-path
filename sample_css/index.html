@@ -25,6 +25,14 @@
     .social-link {
       background: rgba(150, 150, 150, 0.5);
       color: blue;
+      display: inline-block;
+      height: 36px;
+      width: 36px;
+    }
+
+    .show {
+      display: block;
+      height: 12px;
     }
 
     /* BIO STYLES */
@@ -51,10 +59,12 @@
     }
 
     /* HERO STYLES */
-    .full-hero {
+    .full-hero ul{
       background-color: #c7dbfc;
       height: 50vh;
+      display: inline;
     }
+
   </style>
 </head>
 
@@ -63,7 +73,7 @@
     <h1>I'm an h1</h1>
     <ul>
       <li>
-        <a href="https://example.com/" class="social-link">Link</a>
+        <a href="https://example.com/" class="social-link show">Link</a>
       </li>
       <li>
         <a href="https://example.com/" class="social-link">Link</a>
