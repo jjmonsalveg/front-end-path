@@ -21,12 +21,23 @@
       margin-top: 0;
     }
 
-    /* SOCIAL STYLES */
+    /* SOCIAL LINKS */
     .social-link {
       background: rgba(150, 150, 150, 0.5);
+      border-radius: 10px;
       color: blue;
+      display: inline-block;
       height: 36px;
       width: 36px;
+    }
+
+    .social-list {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    .social-list > li {
       display: inline-block;
     }
 
@@ -53,7 +64,7 @@
       float: left;
       font-size: 1rem;
       margin: 40px 1% 0;
-      padding: 0 2% 2%;
+      padding: 2%;
       width: 23%;
     }
 
@@ -87,7 +98,7 @@
 <body>
   <div class="full-hero hero-home">
     <h1>I'm an h1</h1>
-    <ul>
+    <ul class="social-list">
       <li>
         <a href="https://example.com/" class="social-link">Link</a>
       </li>
