@@ -234,6 +234,14 @@ apply to block elements.
   <img src="images/box_model.png">
 </p>
 
+- To check if some fonts are available in you SO please take a look https://www.cssfontstack.com/
+
+### Layout "standard"
+<p align="center">
+  <img src="images/layout_standard.png">
+</p>
+
+
 ## Glosario
 
 - **Comando whoami**: es un comando del tipo Unix, proviene de la concatenación de las palabras en inglés ¿Who am I? que significa, ¿Quién soy?. Es un comando simple, utilizado para imprimir el nombre de usuario efectivo del usuario actual cuando se invoca, que se entiende como el nombre del usuario en sesión.
@@ -284,3 +292,63 @@ mkdir -p <folder_p1>/<folder_p2>/<folder_p3>/<folder>
 
 - Edicion de imagenes gratuita https://evernote.com/products/skitch
 
+
+## Jekyll
+
+
+### Dependencias
+
+#### Ruby/RVM
+
+1. intalacion
+
+```shell
+\curl -sSL https://get.rvm.io | bash
+```
+
+para testear la instalacion corre este comando en una nueva terminal
+
+```shell
+type rvm | head -n 1
+```
+
+la salida debe ser algo igual a
+
+ ```
+ rvm is a function
+ ```
+o
+
+```
+rvm is a shell function from <your-path>
+```
+
+- en caso que la salida sea diferente anexar estas lineas `.zshrc` (mac default) or `.bashrc` (bash shell) 
+
+```
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$GEM_HOME/bin:$PATH"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+```
+
+si deseas actualizarlo 
+
+```shell
+rvm get stable    # last rvm stable version
+rvm get head      # last rvm version(may be no stable)
+```
+
+Instalar versiones de ruby 
+
+```shell
+rvm list known		 	         # list ruby versions 
+rvm install <version_ruby> 	 # install a specific version
+rvm list    						     # list installed versions
+rvm uninstall <version_ruby> # uninstall version withouth remove doc
+rvm remove    <version_ruby> # uninstall version removing doc
+```
+establecer la version del sistema operativo por default
+```
+rvm --default use 3.2.2 
+```
