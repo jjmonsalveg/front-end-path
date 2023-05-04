@@ -352,3 +352,18 @@ establecer la version del sistema operativo por default
 ```
 rvm --default use 3.2.2 
 ```
+
+listar gemsets:
+
+```shell
+rvm gemset list
+```
+
+```shell
+rvm --create --ruby-version use <version_ruby>@<gemset_name>
+```
+
+
+# TODO.
+- configurar consola
+- configurar rvm autocomplete
