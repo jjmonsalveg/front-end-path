@@ -363,7 +363,31 @@ rvm gemset list
 rvm --create --ruby-version use <version_ruby>@<gemset_name>
 ```
 
+### Instalacion 
 
+- Instalar openssl usando este comando (solo para Mac):   
+```shell
+brew install openssl@3
+```
+
+- Instalar las dependencias con:
+```shell
+ bundle _2.2.17_ install
+```
+
+### Verificar que funciona
+
+- Moverse a sample_website:  
+```shell
+cd sample_website
+```
+- Correr jekyll: 
+```shell
+ bundle _2.2.17_ exec jekyll serve  
+```
+- copiar en el navegador: http://127.0.0.1:4000/
+
+- Para salir de jekyll server presiona Ctrl + c
 # TODO.
 - configurar consola
 - configurar rvm autocomplete
