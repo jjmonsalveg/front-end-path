@@ -1,5 +1,18 @@
 # Front end path
 
+## Visual Studio Code
+
+Para instalar el editor de codigo ve a [VsCode](https://code.visualstudio.com/?wt.mc_id=vscom_downloads)
+
+### Plugins
+
+- [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): Para tener una experiencia uniforme entre editores se usa .editorconfig
+- [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): Extension para git en vscode
+- [LiveShare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare): Para trabajar en equipo
+- [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced): Para previsualizar markdown
+- [Vim emulator](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim):
+emular vim en vscode, este ultimo es opcional porque puede ser dificil de usar,
+para aprender mas movimientos vim vea [este link](https://vim.rtorr.com/)
 ## Git 
 
 ### Instalacion
