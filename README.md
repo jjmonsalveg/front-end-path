@@ -391,3 +391,4 @@ cd sample_website
 # TODO.
 - configurar consola
 - configurar rvm autocomplete
+- crear un ambiente remoto en aws
