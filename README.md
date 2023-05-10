@@ -23,7 +23,8 @@ Para instalar el editor de codigo ve a [VsCode](https://code.visualstudio.com/?w
         },
     ```
 
-    recuerde que la linea previa debe terminar con coma, porque en json cada elemento esta separado por comas.
+recuerde que la linea previa debe terminar con coma, porque en json cada
+elemento esta separado por comas.
 
 ## Git
 

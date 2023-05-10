@@ -12,6 +12,32 @@ a {
   color: #f00;
 }
 
+/* HEADER STYLES */
+.header-nav {
+  float: right;
+  padding: 5.5vh 60px 0 0;
+}
+.header-nav > li {
+  display: inline-block;
+  margin-left: 1em;
+}
+.header-nav a {
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header-nav a:hover,
+.header-nav a:active {
+  color: #ed6e2f;
+}
+.header-logo:hover,
+.header-logo:active {
+  opacity: 0.1;
+}
+
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
