@@ -6,24 +6,35 @@ Para instalar el editor de codigo ve a [VsCode](https://code.visualstudio.com/?w
 
 ### Plugins
 
--   [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): Para tener una experiencia uniforme entre editores se usa .editorconfig
--   [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): Extension para git en vscode
--   [LiveShare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare): Para trabajar en equipo
--   [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced): Para previsualizar markdown
--   [Vim emulator](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim):
-    emular vim en vscode, este ultimo es opcional porque puede ser dificil de usar,
-    para aprender mas movimientos vim vea [este link](https://vim.rtorr.com/)
--   [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) Para dar formato a nuestros archivos
-    para establecerlo como default presione `ctrl+shift+p` o `cmd+shift+p`(mac) busque `Preferences: Open User Settings (Json)` y añada al final pero dentro de la llave:
+- [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig):
+  Para tener una experiencia uniforme entre editores se usa .editorconfig
 
-    ```json
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-    ```
+- [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens):
+  Extension para git en vscode
 
-    recuerde que la linea previa debe terminar con coma, porque en json cada elemento esta separado por comas.
+- [LiveShare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare):
+  Para trabajar en equipo [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced):
+
+- Para previsualizar markdown [Vim
+  emulator](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim):
+  emular vim en vscode, este ultimo es opcional porque puede ser dificil de
+  usar, para aprender mas movimientos vim vea [este link](https://vim.rtorr.com/)
+
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  Para dar formato a nuestros archivos
+  para establecerlo como default presione `ctrl+shift+p` o `cmd+shift+p`(mac)
+  busque `Preferences: Open User Settings (Json)` y añada al final pero dentro de
+  la llave:
+
+  ```json
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+  ```
+
+recuerde que la linea previa debe terminar con coma, porque en json cada
+elemento esta separado por comas.
 
 ## Git
 
@@ -33,8 +44,8 @@ Para instalar el editor de codigo ve a [VsCode](https://code.visualstudio.com/?w
 
 1. Se instala Homebrew [click aquí](https://brew.sh/)
 
--   Abrir el terminal de macOS
--   Pegar el siguiente comando en el terminal:
+- Abrir el terminal de macOS
+- Pegar el siguiente comando en el terminal:
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -42,7 +53,7 @@ Para instalar el editor de codigo ve a [VsCode](https://code.visualstudio.com/?w
 
 2. Se instala Git
 
--   Luego de haber instalado Homebrew pegamos en la consola el siguiente comando:
+- Luego de haber instalado Homebrew pegamos en la consola el siguiente comando:
 
 ```
 brew install git
@@ -52,14 +63,14 @@ brew install git
 
 ##### Pasos para instalar Git en sistema operativo Ubuntu.
 
--   **1.** Desde tu consola , instala Git mediante los siguientes comandos:
+- **1.** Desde tu consola , instala Git mediante los siguientes comandos:
 
 ```shell
 sudo apt-get update
 sudo apt-get install git
 ```
 
--   **2.** Escribe **git --version** para verificar la versión y que esta se haya instalado correctamente.
+- **2.** Escribe **git --version** para verificar la versión y que esta se haya instalado correctamente.
 
 Debe salirte la version de git instalada. ejemplo de salida: **git version 2.9.2**
 
@@ -84,14 +95,14 @@ git config --list
 
 ### Comandos
 
--   **git init:**
--   **git add:** añade cambios de archivos en tu directorio. En el siguiente ejemplo se añaden todos los cambios realizados:
+- **git init:**
+- **git add:** añade cambios de archivos en tu directorio. En el siguiente ejemplo se añaden todos los cambios realizados:
 
 ```shell
 git add
 ```
 
--   **git commit:** toma todos los cambios escritos en el index, crea un nuevo objeto de confirmación que apunta a él y establece la rama para que apunte a esa nueva confirmación. Ejemplo:
+- **git commit:** toma todos los cambios escritos en el index, crea un nuevo objeto de confirmación que apunta a él y establece la rama para que apunte a esa nueva confirmación. Ejemplo:
 
 ```shell
 git commit -m "Comprometer cambios añadidos"
@@ -99,13 +110,13 @@ git commit -m "Comprometer cambios añadidos"
 
 _El comentario que se haga se sugiere hacerlo como un mandato_
 
--   **git status:** te muestra el estado de los archivos en el index en comparación con los del directorio de trabajo.
+- **git status:** te muestra el estado de los archivos en el index en comparación con los del directorio de trabajo.
 
 ```shell
 git status
 ```
 
--   **git pull:** Fusiona todos los cambios que se han hecho en el repositorio remoto con el directorio de trabajo local.
+- **git pull:** Fusiona todos los cambios que se han hecho en el repositorio remoto con el directorio de trabajo local.
 
 ```shell
 git pull <remoto> <local>
@@ -120,24 +131,30 @@ git pull origin my-branch
 
 Es el equivalente a un `fetch` y luego `merge`.
 
--   **git grep:** Le permite al usuario buscar frases y palabras específicas en los árboles de confirmación, el directorio de trabajo y en el área de preparación.
+- **git grep:** Le permite al usuario buscar frases y palabras específicas en
+  los árboles de confirmación, el directorio de trabajo y en el área de
+  preparación.
 
--   **git log:** Se usa para ver el historial del repositorio listando ciertos detalles de la confirmación.
-    Algunas opciones que usamos son `--graph` y `--oneline`
+- **git log:** Se usa para ver el historial del repositorio listando ciertos
+  detalles de la confirmación.
+  Algunas opciones que usamos son `--graph` y `--oneline`
 
--   **git checkout -b <nombre de tu nueva rama>:** Crea una nueva rama, y a la vez te lleva a ella. Mismo resultado que usar git branch <nombre de tu nueva rama> y git checkout <nombre de tu nueva rama>, pero con un solo comando.
+- **git checkout -b <nombre de tu nueva rama>:** Crea una nueva rama, y a la vez
+  te lleva a ella. Mismo resultado que usar git branch <nombre de tu nueva rama>
+  y git checkout <nombre de tu nueva rama>, pero con un solo comando.
 
 ```shell
 git checkout -b <nombre de tu nueva rama>
 ```
 
--   **git merge:** Permite fusionar una rama con otra
+- **git merge:** Permite fusionar una rama con otra
 
 ```shell
 git merge <nombre de la rama con la que quieres fusionar>
 ```
 
--   **git push:** Carga el contenido de nuestro repositorio local a nuestro repositorio remoto asociado.
+- **git push:** Carga el contenido de nuestro repositorio local a nuestro
+  repositorio remoto asociado.
 
 ```shell
 git push
@@ -148,51 +165,51 @@ git push <remoto> <rama>
 
 1. Comenzar el ssh-agent en segundo plano
 
-```shell
-eval "$(ssh-agent -s)"
-```
+   ```shell
+   eval "$(ssh-agent -s)"
+   ```
 
 2. Abrir el archivo ~/.ssh/config:
 
-```shell
-vim ~/.ssh/config
-```
+   ```shell
+   vim ~/.ssh/config
+   ```
 
 3. Para cada ssh key añada una entrada similar a esta:
 
-```shell
-Host github.com
-  HostName github.com
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/github
-```
+   ```shell
+   Host github.com
+     HostName github.com
+     AddKeysToAgent yes
+     UseKeychain yes
+     IdentityFile ~/.ssh/github
+   ```
 
 4. Cambiar los permisos del archivo:
 
-```shell
-chmod  600 ~/.ssh/config
-```
+   ```shell
+   chmod  600 ~/.ssh/config
+   ```
 
-6. Por cada ssh key añadir al ssh-agent y almacenar su passphrase en la keychain ejemplo:
+5. Por cada ssh key añadir al ssh-agent y almacenar su passphrase en la keychain ejemplo:
 
-```shell
-ssh-add --apple-use-keychain  ~/.ssh/github
-```
+   ```shell
+   ssh-add --apple-use-keychain  ~/.ssh/github
+   ```
 
 ## Recursos y referencias
 
 ### Git
 
--   [Tutorial interactivo](https://learngitbranching.js.org/)
+- [Tutorial interactivo](https://learngitbranching.js.org/)
 
 ### videos
 
--   [Lista de reproducción](https://www.youtube.com/playlist?list=PLa9mLndWyHK3Fuqsc1JE9nDH31wBq4BRt)
+- [Lista de reproducción](https://www.youtube.com/playlist?list=PLa9mLndWyHK3Fuqsc1JE9nDH31wBq4BRt)
 
 ### Markdown
 
--   [chuleta](https://www.markdownguide.org/cheat-sheet/)
+- [chuleta](https://www.markdownguide.org/cheat-sheet/)
 
 ## HTML
 
@@ -257,20 +274,20 @@ beginning and ending tags, like this:
 
 #### Notas
 
--   borders (a line
-    around the box), margins (the distance away from other boxes), and padding
-    (empty space inside the box separating content from the border).
+- borders (a line
+  around the box), margins (the distance away from other boxes), and padding
+  (empty space inside the box separating content from the border).
 
--   Elements that are considered inline elements, like span or a, are only allowed to
-    have margins and padding applied to the left and right (not top or bottom), and
-    they won’t accept a width or height set by CSS. None of these restrictions
-    apply to block elements.
+- Elements that are considered inline elements, like span or a, are only allowed to
+  have margins and padding applied to the left and right (not top or bottom), and
+  they won’t accept a width or height set by CSS. None of these restrictions
+  apply to block elements.
 
 <p align="center">
   <img src="images/box_model.png">
 </p>
 
--   To check if some fonts are available in you SO please take a look https://www.cssfontstack.com/
+- To check if some fonts are available in you SO please take a look https://www.cssfontstack.com/
 
 ### Layout "standard"
 
@@ -280,35 +297,35 @@ beginning and ending tags, like this:
 
 ## Glosario
 
--   **Comando whoami**: es un comando del tipo Unix, proviene de la concatenación de las palabras en inglés ¿Who am I? que significa, ¿Quién soy?. Es un comando simple, utilizado para imprimir el nombre de usuario efectivo del usuario actual cuando se invoca, que se entiende como el nombre del usuario en sesión.
+- **Comando whoami**: es un comando del tipo Unix, proviene de la concatenación de las palabras en inglés ¿Who am I? que significa, ¿Quién soy?. Es un comando simple, utilizado para imprimir el nombre de usuario efectivo del usuario actual cuando se invoca, que se entiende como el nombre del usuario en sesión.
 
--   **HTTP**: significa Hyper Text Transfer Protocol (Protocolo de Transferencia de Hipertexto). Es el protocolo utilizado por tus dispositivos para comunicarse con las páginas web, pero no se encuentra protegido de forma segura.
--   **SSH**: es un programa que permite acceder a otro ordenador a través de la red, ejecutar comandos en la máquina remota y mover ficheros entre dos.
--   **¿Qué es el comando `ls`?**: Este comando nos permite listar un directorio determinado con todo su contenido. Al poner el comando ls nos mostrará todos los archivos y carpetas que existen dentro del directorio en el que nos encontramos.
+- **HTTP**: significa Hyper Text Transfer Protocol (Protocolo de Transferencia de Hipertexto). Es el protocolo utilizado por tus dispositivos para comunicarse con las páginas web, pero no se encuentra protegido de forma segura.
+- **SSH**: es un programa que permite acceder a otro ordenador a través de la red, ejecutar comandos en la máquina remota y mover ficheros entre dos.
+- **¿Qué es el comando `ls`?**: Este comando nos permite listar un directorio determinado con todo su contenido. Al poner el comando ls nos mostrará todos los archivos y carpetas que existen dentro del directorio en el que nos encontramos.
 
--   **Permisos UNIX-LINUX**: En los Sistemas Unix, la gestión de los permisos que los usuarios y los grupos de usuarios tienen sobre los archivos y las carpetas, se realiza mediante un sencillo esquema de tres tipos de permisos que son:
+- **Permisos UNIX-LINUX**: En los Sistemas Unix, la gestión de los permisos que los usuarios y los grupos de usuarios tienen sobre los archivos y las carpetas, se realiza mediante un sencillo esquema de tres tipos de permisos que son:
 
-    -   permiso de lectura **( r ) read**
-    -   permiso de escritura **(w) write**
-    -   permiso de ejecución **(x) execute**
+  - permiso de lectura **( r ) read**
+  - permiso de escritura **(w) write**
+  - permiso de ejecución **(x) execute**
 
--   **¿Que es un usuario root?**: Es una cuenta de usuario especial que no pertenece a ningún grupo de acceso, el usuario root puede visualizar, editar o utilizar cualquier objeto de datos en el sistema.
+- **¿Que es un usuario root?**: Es una cuenta de usuario especial que no pertenece a ningún grupo de acceso, el usuario root puede visualizar, editar o utilizar cualquier objeto de datos en el sistema.
 
 > **Note**
 > El usuario root es siempre un usuario de altos privilegios.
 
--   **¿Que es markdown?**
-    Es una forma sencilla de agregar formato a textos en la web y funciona incorporando algunos caracteres a nuestro contenido.
+- **¿Que es markdown?**
+  Es una forma sencilla de agregar formato a textos en la web y funciona incorporando algunos caracteres a nuestro contenido.
 
--   **Bash y Zsh**
-    Bash (acrónimo de Bourne-Again Shell) es un intérprete de comandos y lenguaje de programación integrado que corre bajo el macroprocesador Shell de Unix. Este programa ejecuta una a una las órdenes que el usuario pone en una ventana de texto o las que se encuentran contenidas en un script o bash script (archivo con todas las instrucciones), para luego devolver los resultados.
-    ZSH, también llamado Z shell, es una versión extendida de Bourne Shell (sh), con muchas características nuevas y soporte para plugins y temas. Dado que se basa en el mismo shell que Bash, ZSH tiene muchas de las mismas características.
+- **Bash y Zsh**
+  Bash (acrónimo de Bourne-Again Shell) es un intérprete de comandos y lenguaje de programación integrado que corre bajo el macroprocesador Shell de Unix. Este programa ejecuta una a una las órdenes que el usuario pone en una ventana de texto o las que se encuentran contenidas en un script o bash script (archivo con todas las instrucciones), para luego devolver los resultados.
+  ZSH, también llamado Z shell, es una versión extendida de Bourne Shell (sh), con muchas características nuevas y soporte para plugins y temas. Dado que se basa en el mismo shell que Bash, ZSH tiene muchas de las mismas características.
 
--   **Comando cd**
-    cd = change directory
-    Este comando te ayuda a moverte o posicionarte dentro de los directorios (folders). Que es lo mismo que buscar folders dentro de Finder
+- **Comando cd**
+  cd = change directory
+  Este comando te ayuda a moverte o posicionarte dentro de los directorios (folders). Que es lo mismo que buscar folders dentro de Finder
 
--   **Comando mkdir**
+- **Comando mkdir**
 
 mkdir = crea un directorio
 Al escribir este comando crearás un directorio ó folder.
@@ -326,7 +343,7 @@ mkdir -p <folder_p1>/<folder_p2>/<folder_p3>/<folder>
 
 ## Herramientas
 
--   Edicion de imagenes gratuita https://evernote.com/products/skitch
+- Edicion de imagenes gratuita https://evernote.com/products/skitch
 
 ## Jekyll
 
@@ -358,7 +375,7 @@ o
 rvm is a shell function from <your-path>
 ```
 
--   en caso que la salida sea diferente anexar estas lineas `.zshrc` (mac default) or `.bashrc` (bash shell)
+- en caso que la salida sea diferente anexar estas lineas `.zshrc` (mac default) or `.bashrc` (bash shell)
 
 ```
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -402,13 +419,13 @@ rvm --create --ruby-version use <version_ruby>@<gemset_name>
 
 ### Instalacion
 
--   Instalar openssl usando este comando (solo para Mac):
+- Instalar openssl usando este comando (solo para Mac):
 
 ```shell
 brew install openssl@3
 ```
 
--   Instalar las dependencias con:
+- Instalar las dependencias con:
 
 ```shell
  bundle _2.2.17_ install
@@ -416,24 +433,24 @@ brew install openssl@3
 
 ### Verificar que funciona
 
--   Moverse a sample_website:
+- Moverse a sample_website:
 
 ```shell
 cd sample_website
 ```
 
--   Correr jekyll:
+- Correr jekyll:
 
 ```shell
  bundle _2.2.17_ exec jekyll serve
 ```
 
--   copiar en el navegador: http://127.0.0.1:4000/
+- copiar en el navegador: http://127.0.0.1:4000/
 
--   Para salir de jekyll server presiona Ctrl + c
+- Para salir de jekyll server presiona Ctrl + c
 
 # TODO.
 
--   configurar consola
--   configurar rvm autocomplete
--   crear un ambiente remoto en aws
+- configurar consola
+- configurar rvm autocomplete
+- crear un ambiente remoto en aws
