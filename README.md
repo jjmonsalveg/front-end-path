@@ -161,6 +161,13 @@ git push
 git push <remoto> <rama>
 ```
 
+- **git remote:** para el manejo de remotos como por ejemplo github
+
+```shell
+git remote prune origin  # limpiar local removiendo 
+                         # lo que NO esta en remoto llamado "origin"
+```
+
 ### Añadiendo ssh keys al ssh-agent
 
 1. Comenzar el ssh-agent en segundo plano
@@ -274,9 +281,7 @@ beginning and ending tags, like this:
 
 #### Notas
 
-- borders (a line
-  around the box), margins (the distance away from other boxes), and padding
-  (empty space inside the box separating content from the border).
+- borders (a line around the box), margins (the distance away from other boxes), and padding (empty space inside the box separating content from the border).
 
 - Elements that are considered inline elements, like span or a, are only allowed to
   have margins and padding applied to the left and right (not top or bottom), and
@@ -284,7 +289,7 @@ beginning and ending tags, like this:
   apply to block elements.
 
 <p align="center">
-  <img src="images/box_model.png">
+  <img src="images/learn-enough-html/box_model.png">
 </p>
 
 - To check if some fonts are available in you SO please take a look https://www.cssfontstack.com/
@@ -292,8 +297,31 @@ beginning and ending tags, like this:
 ### Layout "standard"
 
 <p align="center">
-  <img src="images/layout_standard.png">
+  <img src="images/learn-enough-html/layout_standard.png">
 </p>
+
+### Posicionamiento
+
+- Absoluto(absolute):
+
+<p align="center">
+  <img src="images/learn-enough-html/positioning/position-absolute.png">
+</p>
+
+- Relativo(relative)
+
+<p align="center">
+  <img src="images/learn-enough-html/positioning/position-relative.png">
+</p>
+
+- Fijo(fix)
+
+<p align="center">
+  <img src="images/learn-enough-html/positioning/position-fix.png">
+</p>
+
+nota: La forma en que la posición se basa fuera de los límites de la
+parent es a lo que nos referimos cuando dijimos que establecer una envoltura principal en `position: relative` lo hizo como un lienzo separado: todo lo que está dentro de una posición absoluta toma su lugar en función de las dimensiones del padre.
 
 ## Glosario
 
