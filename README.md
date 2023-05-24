@@ -164,7 +164,7 @@ git push <remoto> <rama>
 - **git remote:** para el manejo de remotos como por ejemplo github
 
 ```shell
-git remote prune origin  # limpiar local removiendo 
+git remote prune origin  # limpiar local removiendo
                          # lo que NO esta en remoto llamado "origin"
 ```
 
@@ -294,13 +294,13 @@ beginning and ending tags, like this:
 
 - To check if some fonts are available in you SO please take a look https://www.cssfontstack.com/
 
-### Layout "standard"
+#### Layout "standard"
 
 <p align="center">
   <img src="images/learn-enough-html/layout_standard.png">
 </p>
 
-### Posicionamiento
+#### Posicionamiento
 
 - Absoluto(absolute):
 
@@ -320,8 +320,14 @@ beginning and ending tags, like this:
   <img src="images/learn-enough-html/positioning/position-fix.png">
 </p>
 
-nota: La forma en que la posición se basa fuera de los límites de la
-parent es a lo que nos referimos cuando dijimos que establecer una envoltura principal en `position: relative` lo hizo como un lienzo separado: todo lo que está dentro de una posición absoluta toma su lugar en función de las dimensiones del padre.
+nota: La forma en que la posición se basa fuera de los límites de la parent es a
+lo que nos referimos cuando dijimos que establecer una envoltura principal en
+`position: relative` lo hizo como un lienzo separado: todo lo que está dentro de
+una posición absoluta toma su lugar en función de las dimensiones del padre.
+
+#### links y Recursos
+
+- https://www.cssmatic.com/
 
 ## Glosario
 
