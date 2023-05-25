@@ -112,6 +112,8 @@ a {
   list-style: none;
   padding: 0;
   text-align: center;
+  position:relative;
+  z-index:40;
 }
 
 .social-list > li {
