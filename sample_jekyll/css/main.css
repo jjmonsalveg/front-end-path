@@ -87,6 +87,7 @@ a {
 .full-hero {
   background-color: #c7dbfc;
   height: 50vh;
+  position: relative;
 }
 
 /* SOCIAL STYLES */
@@ -112,6 +113,9 @@ a {
   list-style: none;
   padding: 0;
   text-align: center;
+  left: 0;
+  bottom: 0;
+  position: absolute;
 }
 
 .social-list > li {
