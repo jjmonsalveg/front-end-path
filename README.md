@@ -329,6 +329,27 @@ una posición absoluta toma su lugar en función de las dimensiones del padre.
 
 - https://www.cssmatic.com/
 
+### JavaScript
+
+JavaScript was originally developed by computer scientist Brendan Eich for
+Netscape Navigator, the first commercial web browser, under the name
+“LiveScript”.
+
+Later on, a standardized version of JavaScript called ECMAScript
+(pronounced ECK-muh-script) was created in an effort to improve
+cross-browser compatibility.
+
+The main exception to this rule is our
+occasional use of contracted names like “ES6”, which refers to the
+sixth edition of ECMAScript (a particularly large and important
+update, ad
+
+#### Recursos
+
+- [Documentacion MDF](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [NPM](https://www.npmjs.com/)
+- [Udemy course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595350?start=0#overview)
+
 ## Glosario
 
 - **Comando whoami**: es un comando del tipo Unix, proviene de la concatenación de las palabras en inglés ¿Who am I? que significa, ¿Quién soy?. Es un comando simple, utilizado para imprimir el nombre de usuario efectivo del usuario actual cuando se invoca, que se entiende como el nombre del usuario en sesión.
