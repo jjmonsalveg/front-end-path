@@ -341,8 +341,7 @@ cross-browser compatibility.
 
 The main exception to this rule is our
 occasional use of contracted names like “ES6”, which refers to the
-sixth edition of ECMAScript (a particularly large and important
-update, ad
+sixth edition of ECMAScript.
 
 #### Recursos
 
