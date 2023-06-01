@@ -503,6 +503,27 @@ cd sample_website
 
 - Para salir de jekyll server presiona Ctrl + c
 
+# Instalacion de node
+
+- Instalar node usando [nvm](https://github.com/nvm-sh/nvm#install--update-script)
+- [check the installation](https://github.com/nvm-sh/nvm#verify-installation)
+
+- Instalar la ultima version de node estable lts
+
+```shell
+nvm install --lts
+```
+
+- Verificar que LTS es la version por default
+
+```shell
+nvm ls
+```
+
+- if it's not activate you can manually [activate autocompletion](https://github.com/nvm-sh/nvm#bash-completion)
+
+- (optional) [autoload nvm version](https://github.com/nvm-sh/nvm#zsh)
+
 # TODO.
 
 - configurar consola
