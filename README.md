@@ -328,6 +328,7 @@ una posición absoluta toma su lugar en función de las dimensiones del padre.
 #### links y Recursos
 
 - https://www.cssmatic.com/
+- [caracteres Unicode](https://symbl.cc/en/)
 
 ### JavaScript
 
