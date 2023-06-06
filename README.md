@@ -102,7 +102,9 @@ git config --list
 git add
 ```
 
-- **git commit:** toma todos los cambios escritos en el index, crea un nuevo objeto de confirmación que apunta a él y establece la rama para que apunte a esa nueva confirmación. Ejemplo:
+- **git commit:** toma todos los cambios escritos en el index, crea un nuevo
+  objeto de confirmación que apunta a él y establece la rama para que apunte a
+  esa nueva confirmación. Ejemplo:
 
 ```shell
 git commit -m "Comprometer cambios añadidos"
