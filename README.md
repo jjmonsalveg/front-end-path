@@ -102,7 +102,9 @@ git config --list
 git add
 ```
 
-- **git commit:** toma todos los cambios escritos en el index, crea un nuevo objeto de confirmación que apunta a él y establece la rama para que apunte a esa nueva confirmación. Ejemplo:
+- **git commit:** toma todos los cambios escritos en el index, crea un nuevo
+  objeto de confirmación que apunta a él y establece la rama para que apunte a
+  esa nueva confirmación. Ejemplo:
 
 ```shell
 git commit -m "Comprometer cambios añadidos"
@@ -204,11 +206,21 @@ git remote prune origin  # limpiar local removiendo
    ssh-add --apple-use-keychain  ~/.ssh/github
    ```
 
+### Estrategias de mezclado
+
+<p align="center">
+  <img src="images/readme/updates_feature_branch.png">
+</p>
+<p align="center">
+  <img src="images/readme/merge_to_main.png">
+</p>
 ## Recursos y referencias
 
 ### Git
 
 - [Tutorial interactivo](https://learngitbranching.js.org/)
+- [Rebase vs merge](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+- [Long running branches](https://westonal.medium.com/long-running-branches-8925a13001ef)
 
 ### videos
 
@@ -449,9 +461,9 @@ rvm get head      # last rvm version(may be no stable)
 Instalar versiones de ruby
 
 ```shell
-rvm list known		 	         # list ruby versions
+rvm list known		 	     # list ruby versions
 rvm install <version_ruby> 	 # install a specific version
-rvm list    						     # list installed versions
+rvm list    				 # list installed versions
 rvm uninstall <version_ruby> # uninstall version withouth remove doc
 rvm remove    <version_ruby> # uninstall version removing doc
 ```
