@@ -1,0 +1,3 @@
+#!/Users/jjmonsalve/.nvm/versions/node/v16.18.0/bin/node
+
+console.log("hello, world!");
