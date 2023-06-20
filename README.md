@@ -337,6 +337,19 @@ lo que nos referimos cuando dijimos que establecer una envoltura principal en
 `position: relative` lo hizo como un lienzo separado: todo lo que está dentro de
 una posición absoluta toma su lugar en función de las dimensiones del padre.
 
+#### Flexbox
+
+<p align="center">
+  <img src="images/learn-enough-html/flexbox/align-items.png">
+</p>
+
+<p align="center">
+  <img src="images/learn-enough-html/flexbox/flex-basis.png">
+</p>
+
+<p align="center">
+  <img src="images/learn-enough-html/flexbox/flex-shrink.png">
+</p>
 #### links y Recursos
 
 - https://www.cssmatic.com/
