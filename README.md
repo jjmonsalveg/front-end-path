@@ -339,6 +339,18 @@ una posición absoluta toma su lugar en función de las dimensiones del padre.
 
 #### Flexbox
 
+- **flex-grow** determines how flex items grow inside their parent. Default 0.
+- **flex-shrink** determines how flex items shrink when their parent gets smaller.
+  Default 1.
+- **flex-basis** determines the size of flex items before space is distributed and
+  how content is treated. Default auto.
+
+Short hand:
+
+```css
+flex: <flex-grow> <flex-shrink> <flex-basis>;
+```
+
 <p align="center">
   <img src="images/learn-enough-html/flexbox/align-items.png">
 </p>
@@ -349,6 +361,14 @@ una posición absoluta toma su lugar en función de las dimensiones del padre.
 
 <p align="center">
   <img src="images/learn-enough-html/flexbox/flex-shrink.png">
+</p>
+
+<p align="center">
+  <img src="images/learn-enough-html/flexbox/flex.png">
+</p>
+
+<p align="center">
+  <img src="images/learn-enough-html/flexbox/flex-props.png">
 </p>
 #### links y Recursos
 

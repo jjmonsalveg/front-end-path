@@ -139,7 +139,7 @@ body {
   min-height: 100vh;
 }
 .content-container {
-  flex-grow: 1;
+  flex: 1 1 auto;
   padding-top: 10vh;
   width: 100%;
 }
@@ -338,15 +338,13 @@ h2 ~ p {
   margin-top: 1em;
 }
 .callout-title {
-  flex-basis: 0;
-  flex-grow: 1;
+  flex: 1; /* equivalente flex: 1 1 0; */
   font-size: 5.75vw;
   text-align: right;
   text-transform: uppercase;
 }
 .callout-copy {
-  flex-basis: 45em;
-  flex-shrink: 0;
+  flex: 0 0 45em;
   font-size: 0.8rem;
   padding: 3vw;
 }

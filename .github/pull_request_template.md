@@ -1,26 +1,26 @@
-##type(scope)
+# type(scope)
 
-This is a detailed explanation of the changes made here<br/>
+This is a detailed explanation of the changes made here
 It should include why the change is required and its background.
 
-### Changelog
+## Changelog
 
 - Added this stuff;
 - Removed another stuff;
 - Adjusted other stuff;
 
-### Risks
+## Risks
 
 If you have some concerns, please add it here
 
 - [ ] This change affect x component, and I would like that QA perform a full
       regression test on Y
 
-### Checklist
+## Checklist
 
 - [ ] Ran test suite
 
-### TODO
+## TODO
 
 If you have some TODOs, please label this PR as 'in progress' and add them
 here for others to follow:
@@ -28,10 +28,10 @@ here for others to follow:
 - [ ] Task 1
 - [ ] Task 2
 
-### Preview (Optional)
+## Preview (Optional)
 
-If there is a preview of your work upload here some screenshots or GIFs<br/>
+If there is a preview of your work upload here some screenshots or GIFs
 
-### Also see
+## Also see
 
 - Some links or references
