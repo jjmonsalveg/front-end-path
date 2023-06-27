@@ -331,6 +331,7 @@ h2 ~ p {
   background-color: #000;
   color: #fff;
   display: flex;
+  flex-direction: column-reverse;
   padding: 7vh 0;
 }
 .home-callout h3 {
