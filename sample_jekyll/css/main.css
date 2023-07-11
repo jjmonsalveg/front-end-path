@@ -173,6 +173,7 @@ h2 ~ p {
 }
 .col-two .col-aside {
   flex: 0 0 20em;
+  flex-direction: column;
   order: 1;
 }
 .col-two .col-content {
