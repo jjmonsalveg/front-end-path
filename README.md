@@ -389,6 +389,27 @@ The main exception to this rule is our
 occasional use of contracted names like “ES6”, which refers to the
 sixth edition of ECMAScript.
 
+#### Regex
+
+1. Usando `RegExp` object
+
+```javascript
+let zipCode = new RegExp("\\d{5}");
+let result = zipCode.exec("Beverly Hills 90210");
+result; /*[ '90210', index: 14, input: 'Beverly Hills 90210' ]*/
+```
+
+2. Usando metodos strings
+
+```javascript
+zipCode = /\d{5}/;
+//zipCode = /\d{5}/g; /*busquedas globales */
+let s = "Beverly Hills 90210 was a '90s TV show set in Los Angeles.";
+s += " 91125 is another ZIP code in the Los Angeles area.";
+s.match(zipCode);
+!!s.match(zipCode); /*verfica si hay coincidencia o no*/
+```
+
 #### Recursos
 
 - [Documentacion MDF](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
