@@ -389,6 +389,18 @@ The main exception to this rule is our
 occasional use of contracted names like “ES6”, which refers to the
 sixth edition of ECMAScript.
 
+### Array
+
+#### Declaracion
+
+#### Metodos
+
+1. slice:
+
+```javascript
+
+```
+
 #### Regex
 
 1. Usando `RegExp` object
@@ -401,14 +413,23 @@ result; /*[ '90210', index: 14, input: 'Beverly Hills 90210' ]*/
 
 2. Usando metodos strings
 
-```javascript
+````javascript
 zipCode = /\d{5}/;
 //zipCode = /\d{5}/g; /*busquedas globales */
 let s = "Beverly Hills 90210 was a '90s TV show set in Los Angeles.";
 s += " 91125 is another ZIP code in the Los Angeles area.";
 s.match(zipCode);
 !!s.match(zipCode); /*verfica si hay coincidencia o no*/
-```
+
+#### Objects
+
+```javascript
+let user = {"firstName": "Michael", "lastName": "Hartl" };
+user["lastName"]
+user.lastName  //esta notacion es equivalente a la linea anterior
+
+testObject = new Object({ firstName: 'Michael', lastName: 'Hartl' });
+````
 
 #### Recursos
 
