@@ -390,17 +390,83 @@ occasional use of contracted names like “ES6”, which refers to the
 sixth edition of ECMAScript.
 
 ### Array
+Los arrays son objetos similares a una lista cuyo prototipo proporciona métodos para efectuar operaciones de recorrido y de mutación. Tanto la longitud como el tipo de los elementos de un array son variables.
 
 #### Declaracion
-
+```javascript
+a = [42, 8, 17, 99];
+```
 #### Metodos
 
 1. slice:
-
+El propósito de este método es, como su nombre indica, cortar un trozo del array. Es decir que con slice podemos definir una sección del array que queremos mantener, eliminando los elementos restantes. *Ejemplo:*
 ```javascript
-
+a.slice(1);
+console.log(a) // [8, 17, 99]
 ```
 
+2. lenght:
+Length es la propiedad de una función objeto, e indica el número de argumentos que una función requiere, por ejemplo, el número de parámetros formales. *Ejemplo:*
+```javascript
+a.length;
+console.log(a) // 4
+```
+
+3. includes:
+Este método determina si una matriz incluye un determinado elemento, devuelve true o false según corresponda. *Ejemplo:*
+```javascript
+a.includes(1);
+console.log(a) // false debido a que el numero 1 no es un elemento del array
+
+a.includes(42);
+console.log(a) // true
+```
+
+4. reverse:
+Invierte el orden de los elementos de un array. El primer elemento pasa a ser el último y el último pasa a ser el primero. Cabe mencionar que este metodo modifica el array original. *Ejemplo:*
+```javascript
+a.reverse() // [99, 17, 8, 42] 
+
+console.log(a) // [99, 17, 8, 42] 
+```
+
+5. sort:
+ Ordenará los números en función de su valor como cadena de texto, no de su valor numérico. *Ejemplo:*
+```javascript
+a.sort() // [17, 42, 8, 99] 
+
+console.log(a) // [17, 42, 8, 99]
+```
+**Nota: como en el ejemplo anterior, este metodo tambien modifica el array original**
+
+Para personalizar cómo ```sort()``` ordena los elementos, puedes pasar una función de comparación como argumento. La función de comparación debe devolver:
+
+- Un valor negativo si el primer argumento debe aparecer antes que el segundo. En nuestro caso esta función de comparación ordena los número de mayor a menor. *Ejemplo:*
+```javascript
+a.sort(function(a, b) {
+  return b - a
+})
+console.log(a) // [99, 42, 17, 8]
+```
+- Un valor positivo si el segundo argumento debe aparecer antes que el primero. En nuestro caso esta función de comparación ordena los número de menor a mayor. *Ejemplo:*
+```javascript
+a.sort(function(a, b) {
+  return a - b
+})
+console.log(a) // [8, 17, 42, 99]
+```
+- Cero si ambos argumentos son iguales.
+
+6. toSorted()
+Como se observó en el ejempllo anterior ```.sort() ```modifica el array original. Si se quiere obtener un array ordenado sin modificar el original, se puede usar el método ```.toSorted()```. *Ejemplo:*
+```javascript
+let numerosOrdenados = a.toSorted((a, b) => {
+  return a - b
+})
+console.log(numerosOrdenados) // [8, 17, 42, 99]
+```
+
+7. 
 #### Regex
 
 1. Usando `RegExp` object
