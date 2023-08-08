@@ -466,7 +466,45 @@ let numerosOrdenados = a.toSorted((a, b) => {
 console.log(numerosOrdenados) // [8, 17, 42, 99]
 ```
 
-7. 
+7. push:
+El método push() agrega los elementos especificados al final de un array y devuelve la nueva longitud del array. Afecta el original. *Ejemplo:*
+```javascript
+a = [42, 8, 17, 99];
+a.push(12);
+a -> [42, 8, 17, 99, 12];
+```
+
+8. pop:
+El método pop() elimina el último elemento de un array y devuelve ese elemento. Este método cambia la longitud del array. Afecta el original. *Ejemplo:*
+```javascript
+a = [42, 8, 17, 99];
+a.pop();
+a -> [42, 8, 17];
+```
+
+9. join:
+El método join() crea y devuelve un nuevo string concatenando todos los elementos en el array, separados por comas o una cadena de separación especificada. Si el array tiene solo un elemento, ese elemento se devolverá sin usar el separador. *Ejemplo:*
+```javascript
+a = [ 'ant', 'bat', 'cat', '42' ];
+a.join("; ");
+a -> 'ant, bat, cat, 42'; 
+```
+
+10. shift:
+El método shift() elimina el primer elemento de un array y devuelve ese elemento eliminado. Este método cambia la longitud del array. Afecta el original. *Ejemplo:*
+```javascript
+a = [42, 8, 17, 99];
+a.shift();
+a -> [8, 17, 99];
+```
+
+11. unshift:
+El método unshift() agrega los elementos especificados al comienzo de un array y devuelve la nueva longitud del array. Afecta el original. *Ejemplo:*
+```javascript
+a = [42, 8, 17, 99];
+a.unshift(51);
+a -> [51, 42, 8, 17, 99];
+```
 #### Regex
 
 1. Usando `RegExp` object
