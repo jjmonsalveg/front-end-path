@@ -642,10 +642,13 @@ h2 ~ p {
     flex: 1;
   }
   /* BLOG STYLES */
-  .blog-recent {
+  /* .blog-recent {
     display: none;
-  }
+  } */
   .blog-previews {
     padding: 0;
+  }
+  .blog-cols {
+    flex-direction: column-reverse;
   }
 }
