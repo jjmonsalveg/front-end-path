@@ -465,11 +465,6 @@ h2 ~ p {
   background-color: #000;
   color: #fff;
 }
-@media(max-width:600px){
-  .half-hero{
-    display: none; 
-  }
-}
 .half-hero {
   background-position: center center;
   background-size: cover;
@@ -584,7 +579,11 @@ h2 ~ p {
 .bio-copy a {
   color: green;
 }
-
+@media (max-width: 600px) {
+  .half-hero {
+    display: none;
+  }
+}
 @media (max-width: 800px) {
   html {
     box-shadow: none;
