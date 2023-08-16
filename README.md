@@ -390,121 +390,161 @@ occasional use of contracted names like “ES6”, which refers to the
 sixth edition of ECMAScript.
 
 ### Array
+
 Los arrays son objetos similares a una lista cuyo prototipo proporciona métodos para efectuar operaciones de recorrido y de mutación. Tanto la longitud como el tipo de los elementos de un array son variables.
 
 #### Declaracion
+
 ```javascript
 a = [42, 8, 17, 99];
 ```
+
 #### Metodos
 
 1. slice:
-El propósito de este método es, como su nombre indica, cortar un trozo del array. Es decir que con slice podemos definir una sección del array que queremos mantener, eliminando los elementos restantes. *Ejemplo:*
+   El propósito de este método es, como su nombre indica, cortar un trozo del array. Es decir que con slice podemos definir una sección del array que queremos mantener, eliminando los elementos restantes. _Ejemplo:_
+
 ```javascript
 a.slice(1);
-console.log(a) // [8, 17, 99]
+console.log(a); // [8, 17, 99]
 ```
 
 2. lenght:
-Length es la propiedad de una función objeto, e indica el número de argumentos que una función requiere, por ejemplo, el número de parámetros formales. *Ejemplo:*
+   Length es la propiedad de una función objeto, e indica el número de argumentos que una función requiere, por ejemplo, el número de parámetros formales. _Ejemplo:_
+
 ```javascript
 a.length;
-console.log(a) // 4
+console.log(a); // 4
 ```
 
 3. includes:
-Este método determina si una matriz incluye un determinado elemento, devuelve true o false según corresponda. *Ejemplo:*
+   Este método determina si una matriz incluye un determinado elemento, devuelve true o false según corresponda. _Ejemplo:_
+
 ```javascript
 a.includes(1);
-console.log(a) // false debido a que el numero 1 no es un elemento del array
+console.log(a); // false debido a que el numero 1 no es un elemento del array
 
 a.includes(42);
-console.log(a) // true
+console.log(a); // true
 ```
 
 4. reverse:
-Invierte el orden de los elementos de un array. El primer elemento pasa a ser el último y el último pasa a ser el primero. Cabe mencionar que este metodo modifica el array original. *Ejemplo:*
-```javascript
-a.reverse() // [99, 17, 8, 42] 
+   Invierte el orden de los elementos de un array. El primer elemento pasa a ser el último y el último pasa a ser el primero. Cabe mencionar que este metodo modifica el array original. _Ejemplo:_
 
-console.log(a) // [99, 17, 8, 42] 
+```javascript
+a.reverse(); // [99, 17, 8, 42]
+
+console.log(a); // [99, 17, 8, 42]
 ```
 
 5. sort:
- Ordenará los números en función de su valor como cadena de texto, no de su valor numérico. *Ejemplo:*
-```javascript
-a.sort() // [17, 42, 8, 99] 
+   Ordenará los números en función de su valor como cadena de texto, no de su valor numérico. _Ejemplo:_
 
-console.log(a) // [17, 42, 8, 99]
+```javascript
+a.sort(); // [17, 42, 8, 99]
+
+console.log(a); // [17, 42, 8, 99]
 ```
+
 **Nota: como en el ejemplo anterior, este metodo tambien modifica el array original**
 
-Para personalizar cómo ```sort()``` ordena los elementos, puedes pasar una función de comparación como argumento. La función de comparación debe devolver:
+Para personalizar cómo `sort()` ordena los elementos, puedes pasar una función de comparación como argumento. La función de comparación debe devolver:
 
-- Un valor negativo si el primer argumento debe aparecer antes que el segundo. En nuestro caso esta función de comparación ordena los número de mayor a menor. *Ejemplo:*
+- Un valor negativo si el primer argumento debe aparecer antes que el segundo.
+  En nuestro caso esta función de comparación ordena los número de mayor a
+  menor. _Ejemplo:_
+
 ```javascript
-a.sort(function(a, b) {
-  return b - a
-})
-console.log(a) // [99, 42, 17, 8]
+a.sort(function (a, b) {
+ return b - a;
+});
+console.log(a); // [99, 42, 17, 8]
 ```
-- Un valor positivo si el segundo argumento debe aparecer antes que el primero. En nuestro caso esta función de comparación ordena los número de menor a mayor. *Ejemplo:*
+
+- Un valor positivo si el segundo argumento debe aparecer antes que el primero.
+  En nuestro caso esta función de comparación ordena los número de menor a
+  mayor. _Ejemplo:_
+
 ```javascript
-a.sort(function(a, b) {
-  return a - b
-})
-console.log(a) // [8, 17, 42, 99]
+a.sort(function (a, b) {
+ return a - b;
+});
+console.log(a); // [8, 17, 42, 99]
 ```
+
 - Cero si ambos argumentos son iguales.
 
 6. toSorted()
-Como se observó en el ejempllo anterior ```.sort() ```modifica el array original. Si se quiere obtener un array ordenado sin modificar el original, se puede usar el método ```.toSorted()```. *Ejemplo:*
+
+Como se observó en el ejempllo anterior `.sort() `modifica el array
+original. Si se quiere obtener un array ordenado sin modificar el original, se
+puede usar el método `.toSorted()`. _Ejemplo:_
+
 ```javascript
 let numerosOrdenados = a.toSorted((a, b) => {
-  return a - b
-})
-console.log(numerosOrdenados) // [8, 17, 42, 99]
+ return a - b;
+});
+console.log(numerosOrdenados); // [8, 17, 42, 99]
 ```
 
 7. push:
-El método push() agrega los elementos especificados al final de un array y devuelve la nueva longitud del array. Afecta el original. *Ejemplo:*
+
+El método push() agrega los elementos especificados al final de un array y
+devuelve la nueva longitud del array. Afecta el original. _Ejemplo:_
+
 ```javascript
 a = [42, 8, 17, 99];
 a.push(12);
-a -> [42, 8, 17, 99, 12];
+// a -> [42, 8, 17, 99, 12];
 ```
 
 8. pop:
-El método pop() elimina el último elemento de un array y devuelve ese elemento. Este método cambia la longitud del array. Afecta el original. *Ejemplo:*
+   El método pop() elimina el último elemento de un array y devuelve ese elemento.
+   Este método cambia la longitud del array. Afecta el original. _Ejemplo:_
+
 ```javascript
 a = [42, 8, 17, 99];
 a.pop();
-a -> [42, 8, 17];
+//a -> [42, 8, 17];
 ```
 
 9. join:
-El método join() crea y devuelve un nuevo string concatenando todos los elementos en el array, separados por comas o una cadena de separación especificada. Si el array tiene solo un elemento, ese elemento se devolverá sin usar el separador. *Ejemplo:*
+
+El método join() crea y devuelve un nuevo string concatenando todos los
+elementos en el array, separados por comas o una cadena de separación
+especificada. Si el array tiene solo un elemento, ese elemento se devolverá sin
+usar el separador. _Ejemplo:_
+
 ```javascript
-a = [ 'ant', 'bat', 'cat', '42' ];
-a.join("; ");
-a -> 'ant, bat, cat, 42'; 
+a = ["ant", "bat", "cat", "42"];
+a.join(", ");
+//a -> 'ant, bat, cat, 42';
 ```
 
 10. shift:
-El método shift() elimina el primer elemento de un array y devuelve ese elemento eliminado. Este método cambia la longitud del array. Afecta el original. *Ejemplo:*
+
+El método shift() elimina el primer elemento de un array y devuelve ese elemento
+eliminado. Este método cambia la longitud del array. Afecta el original.
+
+_Ejemplo:_
+
 ```javascript
 a = [42, 8, 17, 99];
 a.shift();
-a -> [8, 17, 99];
+// a -> [8, 17, 99];
 ```
 
 11. unshift:
-El método unshift() agrega los elementos especificados al comienzo de un array y devuelve la nueva longitud del array. Afecta el original. *Ejemplo:*
+
+El método unshift() agrega los elementos especificados al comienzo de un array y
+devuelve la nueva longitud del array. Afecta el original. _Ejemplo:_
+
 ```javascript
 a = [42, 8, 17, 99];
 a.unshift(51);
 a -> [51, 42, 8, 17, 99];
 ```
+
 #### Regex
 
 1. Usando `RegExp` object
@@ -512,18 +552,20 @@ a -> [51, 42, 8, 17, 99];
 ```javascript
 let zipCode = new RegExp("\\d{5}");
 let result = zipCode.exec("Beverly Hills 90210");
-result; /*[ '90210', index: 14, input: 'Beverly Hills 90210' ]*/
+result;
+//[ '90210', index: 14, input: 'Beverly Hills 90210' ]
 ```
 
 2. Usando metodos strings
 
 ````javascript
-zipCode = /\d{5}/;
+const zipCode = /\d{5}/;
 //zipCode = /\d{5}/g; /*busquedas globales */
 let s = "Beverly Hills 90210 was a '90s TV show set in Los Angeles.";
 s += " 91125 is another ZIP code in the Los Angeles area.";
 s.match(zipCode);
 !!s.match(zipCode); /*verfica si hay coincidencia o no*/
+```
 
 #### Objects
 
