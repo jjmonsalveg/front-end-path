@@ -577,6 +577,20 @@ user.lastName  //esta notacion es equivalente a la linea anterior
 testObject = new Object({ firstName: 'Michael', lastName: 'Hartl' });
 ````
 
+#### Funciones
+
+```javascript
+function myAwesomeFunctionName(parameterList) {
+    ...
+}
+
+let myAwesomeFunctionName = (parameterList) => {
+    ...
+}
+
+myAwesomeFunctionName("myRealArguments")
+```
+
 #### Recursos
 
 - [Documentacion MDF](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
