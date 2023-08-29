@@ -390,6 +390,11 @@ h2 ~ p {
   text-decoration: none;
   text-transform: uppercase;
 }
+.mobile-menu-check,
+.show-mobile-menu {
+  display: none;
+}
+
 .nav-links a:hover,
 .nav-links a:active {
   color: #ed6e2f;
