@@ -429,7 +429,9 @@ console.log(a); // true
 ```
 
 4. reverse:
-   Invierte el orden de los elementos de un array. El primer elemento pasa a ser el último y el último pasa a ser el primero. Cabe mencionar que este metodo modifica el array original. _Ejemplo:_
+   Invierte el orden de los elementos de un array. El primer elemento pasa a ser
+   el último y el último pasa a ser el primero. Cabe mencionar que este metodo
+   modifica el array original. _Ejemplo:_
 
 ```javascript
 a.reverse(); // [99, 17, 8, 42]
@@ -545,6 +547,13 @@ a.unshift(51);
 a -> [51, 42, 8, 17, 99];
 ```
 
+12. from:
+
+```javascript
+Array.from("honey badger");
+//[ 'h', 'o', 'n', 'e', 'y', ' ', 'b', 'a', 'd', 'g', 'e', 'r' ]
+```
+
 #### Regex
 
 1. Usando `RegExp` object
@@ -589,6 +598,40 @@ let myAwesomeFunctionName = (parameterList) => {
 }
 
 myAwesomeFunctionName("myRealArguments")
+```
+
+#### Map
+
+- Declaracion
+
+```javascript
+let uniques = new Map();
+```
+
+- comprobar existencia de key
+
+```javascript
+uniques.has(word);
+```
+
+- Establecer una nueva entrada en el map
+
+```javascript
+uniques.set(word, 1);
+```
+
+- Actualizar una nueva entrada en el map
+
+```javascript
+uniques.set(word, uniques.get(word) + 1);
+```
+
+#### REPL
+
+1. Cargar archivos
+
+```javascript
+.load nombre-del-archivo.js
 ```
 
 #### Recursos
