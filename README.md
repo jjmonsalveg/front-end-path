@@ -575,7 +575,28 @@ s += " 91125 is another ZIP code in the Los Angeles area.";
 s.match(zipCode);
 !!s.match(zipCode); /*verfica si hay coincidencia o no*/
 ```
+#### Estructuras de repeticion
 
+- for:
+```javascript
+for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+}
+```
+- forEach:
+```javascript
+array.forEach(function(element){
+    console.log(element);
+    }
+)
+```
+- for-of:
+
+```javascript
+for(element of array){
+    console.log(element);
+}
+```
 #### Objects
 
 ```javascript
