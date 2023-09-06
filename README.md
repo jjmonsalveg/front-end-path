@@ -647,6 +647,21 @@ uniques.set(word, 1);
 uniques.set(word, uniques.get(word) + 1);
 ```
 
+#### map function
+
+```javascript
+[1, 2, 3, 4].map(function (n) {
+ return n * n;
+});
+
+[1, 2, 3, 4].map((n) => {
+ return n * n;
+});
+
+// prettier-ignore
+[1, 2, 3, 4].map(n => n * n);
+```
+
 #### REPL
 
 1. Cargar archivos
