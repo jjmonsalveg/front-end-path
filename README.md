@@ -662,6 +662,25 @@ uniques.set(word, uniques.get(word) + 1);
 [1, 2, 3, 4].map(n => n * n);
 ```
 
+#### filter function
+
+```javascript
+[1, 2, 3, 4, 5, 6, 7, 8].filter((n) => n % 2 === 1);
+//[ 1, 3, 5, 7 ]
+
+//filter even values
+[1, 2, 3, 4, 5, 6, 7, 8].filter((n) => {
+ return n % 2 === 1;
+});
+// [ 1, 3, 5, 7 ]
+
+//filter odd values
+[1, 2, 3, 4, 5, 6, 7, 8].filter(function (n) {
+ return n % 2 === 1;
+});
+//[ 1, 3, 5, 7 ]
+```
+
 #### REPL
 
 1. Cargar archivos

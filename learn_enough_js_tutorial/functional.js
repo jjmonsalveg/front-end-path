@@ -20,5 +20,32 @@ function funtionalUrls(elements) {
   return elements.map((element) => urlify(element));
 }
 
+console.log("urls Imperative version:");
 console.log(imperativeUrls(states));
+
+console.log("urls Functional version:");
 console.log(funtionalUrls(states));
+
+// singles: Imperative version
+function imperativeSingles(elements) {
+  let singles = [];
+
+  elements.forEach(function (element) {
+    if (element.split(/\s+/).length === 1) {
+      singles.push(element);
+    }
+  });
+
+  return singles;
+}
+
+//singles: Functional version
+function functionalSingles(elements) {
+  return elements.filter((element) => element.split(/\s+/).length === 1);
+}
+
+console.log("\nStates with one word --Imperative--:");
+console.log(imperativeSingles(states));
+
+console.log("\nStates with one word --Functional--:");
+console.log(functionalSingles(states));
