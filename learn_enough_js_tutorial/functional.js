@@ -49,3 +49,17 @@ console.log(imperativeSingles(states));
 
 console.log("\nStates with one word --Functional--:");
 console.log(functionalSingles(states));
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// sum: Imperative solution
+function imperativeSum(elements) {
+  let total = 0;
+
+  elements.forEach((n) => (total += n));
+
+  return total;
+}
+
+console.log("\nSum of numbers --Imperative--:");
+console.log(imperativeSum(numbers));
