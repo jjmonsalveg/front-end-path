@@ -56,6 +56,7 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function imperativeSum(elements) {
   let total = 0;
 
+  // Equivalent total = total + n to total += n
   elements.forEach((n) => (total += n));
 
   return total;
