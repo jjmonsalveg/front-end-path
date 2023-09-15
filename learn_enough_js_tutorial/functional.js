@@ -64,3 +64,38 @@ function imperativeSum(elements) {
 
 console.log("\nSum of numbers --Imperative--:");
 console.log(imperativeSum(numbers));
+
+// sum: Functional solution
+function functionalSum(elements) {
+  return elements.reduce((total, n) => {
+    return (total += n);
+  });
+}
+
+console.log("\nSum of numbers --Functional--:");
+console.log(functionalSum(numbers));
+
+// lengths: Imperative solution
+function imperativeLengths(elements) {
+  let lengths = {};
+
+  elements.forEach(function (element) {
+    lengths[element] = element.length;
+  });
+
+  return lengths;
+}
+
+console.log("\nLengths of states --Imperative--:");
+console.log(imperativeLengths(states));
+
+// lengths: Functional solution
+function functionalLengths(elements) {
+  return elements.reduce((lengths, element) => {
+    lengths[element] = element.length;
+    return lengths;
+  }, {});
+}
+
+console.log("\nLengths of states --Functional--:");
+console.log(functionalLengths(states));
