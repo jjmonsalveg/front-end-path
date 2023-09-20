@@ -8,3 +8,8 @@ function palindrome(string) {
   let processedContent = string.toLowerCase();
   return processedContent === reverse(processedContent);
 }
+
+//Defines a Phrase object
+function Phrase(content) {
+  this.content = content;
+}

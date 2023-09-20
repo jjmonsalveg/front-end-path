@@ -616,6 +616,16 @@ user.lastName; //esta notacion es equivalente a la linea anterior
 testObject = new Object({ firstName: "Michael", lastName: "Hartl" });
 ```
 
+```javascript
+// constructor
+function Phrase(content) {
+ this.content = content;
+}
+
+let greeting = new Phrase("Hello, world!");
+greeting.content;
+```
+
 #### Funciones
 
 ```javascript
