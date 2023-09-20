@@ -391,7 +391,9 @@ sixth edition of ECMAScript.
 
 ### Array
 
-Los arrays son objetos similares a una lista cuyo prototipo proporciona métodos para efectuar operaciones de recorrido y de mutación. Tanto la longitud como el tipo de los elementos de un array son variables.
+Los arrays son objetos similares a una lista cuyo prototipo proporciona métodos
+para efectuar operaciones de recorrido y de mutación. Tanto la longitud como el
+tipo de los elementos de un array son variables.
 
 #### Declaracion
 
@@ -422,7 +424,8 @@ console.log(a); // 4
 ```
 
 3. includes:
-   Este método determina si una matriz incluye un determinado elemento, devuelve true o false según corresponda. _Ejemplo:_
+   Este método determina si una matriz incluye un determinado elemento, devuelve
+   true o false según corresponda. _Ejemplo:_
 
 ```javascript
 a.includes(1);
@@ -433,6 +436,7 @@ console.log(a); // true
 ```
 
 4. reverse:
+
    Invierte el orden de los elementos de un array. El primer elemento pasa a ser
    el último y el último pasa a ser el primero. Cabe mencionar que este metodo
    modifica el array original. _Ejemplo:_
@@ -444,7 +448,9 @@ console.log(a); // [99, 17, 8, 42]
 ```
 
 5. sort:
-   Ordenará los números en función de su valor como cadena de texto, no de su valor numérico. _Ejemplo:_
+
+   Ordenará los números en función de su valor como cadena de texto, no de su
+   valor numérico. _Ejemplo:_
 
 ```javascript
 a.sort(); // [17, 42, 8, 99]
@@ -454,7 +460,8 @@ console.log(a); // [17, 42, 8, 99]
 
 **Nota: como en el ejemplo anterior, este metodo tambien modifica el array original**
 
-Para personalizar cómo `sort()` ordena los elementos, puedes pasar una función de comparación como argumento. La función de comparación debe devolver:
+Para personalizar cómo `sort()` ordena los elementos, puedes pasar una función
+de comparación como argumento. La función de comparación debe devolver:
 
 - Un valor negativo si el primer argumento debe aparecer antes que el segundo.
   En nuestro caso esta función de comparación ordena los número de mayor a
@@ -482,7 +489,7 @@ console.log(a); // [8, 17, 42, 99]
 
 6. toSorted()
 
-Como se observó en el ejempllo anterior `.sort() `modifica el array
+Como se observó en el ejemplo anterior `.sort() `modifica el array
 original. Si se quiere obtener un array ordenado sin modificar el original, se
 puede usar el método `.toSorted()`. _Ejemplo:_
 
@@ -727,33 +734,59 @@ uniques.set(word, uniques.get(word) + 1);
 
 ## Glosario
 
-- **Comando whoami**: es un comando del tipo Unix, proviene de la concatenación de las palabras en inglés ¿Who am I? que significa, ¿Quién soy?. Es un comando simple, utilizado para imprimir el nombre de usuario efectivo del usuario actual cuando se invoca, que se entiende como el nombre del usuario en sesión.
+- **Comando whoami**: es un comando del tipo Unix, proviene de la concatenación
+  de las palabras en inglés ¿Who am I? que significa, ¿Quién soy?. Es un comando
+  simple, utilizado para imprimir el nombre de usuario efectivo del usuario
+  actual cuando se invoca, que se entiende como el nombre del usuario en sesión.
 
-- **HTTP**: significa Hyper Text Transfer Protocol (Protocolo de Transferencia de Hipertexto). Es el protocolo utilizado por tus dispositivos para comunicarse con las páginas web, pero no se encuentra protegido de forma segura.
-- **SSH**: es un programa que permite acceder a otro ordenador a través de la red, ejecutar comandos en la máquina remota y mover ficheros entre dos.
-- **¿Qué es el comando `ls`?**: Este comando nos permite listar un directorio determinado con todo su contenido. Al poner el comando ls nos mostrará todos los archivos y carpetas que existen dentro del directorio en el que nos encontramos.
+- **HTTP**: significa Hyper Text Transfer Protocol (Protocolo de Transferencia
+  de Hipertexto). Es el protocolo utilizado por tus dispositivos para
+  comunicarse con las páginas web, pero no se encuentra protegido de forma
+  segura.
 
-- **Permisos UNIX-LINUX**: En los Sistemas Unix, la gestión de los permisos que los usuarios y los grupos de usuarios tienen sobre los archivos y las carpetas, se realiza mediante un sencillo esquema de tres tipos de permisos que son:
+- **SSH**: es un programa que permite acceder a otro ordenador a través de la
+  red, ejecutar comandos en la máquina remota y mover ficheros entre dos.
+
+- **¿Qué es el comando `ls`?**: Este comando nos permite listar un directorio
+  determinado con todo su contenido. Al poner el comando ls nos mostrará todos
+  los archivos y carpetas que existen dentro del directorio en el que nos
+  encontramos.
+
+- **Permisos UNIX-LINUX**: En los Sistemas Unix, la gestión de los permisos que
+  los usuarios y los grupos de usuarios tienen sobre los archivos y las
+  carpetas, se realiza mediante un sencillo esquema de tres tipos de permisos
+  que son:
 
   - permiso de lectura **( r ) read**
   - permiso de escritura **(w) write**
   - permiso de ejecución **(x) execute**
 
-- **¿Que es un usuario root?**: Es una cuenta de usuario especial que no pertenece a ningún grupo de acceso, el usuario root puede visualizar, editar o utilizar cualquier objeto de datos en el sistema.
+- **¿Que es un usuario root?**: Es una cuenta de usuario especial que no
+  pertenece a ningún grupo de acceso, el usuario root puede visualizar, editar o
+  utilizar cualquier objeto de datos en el sistema.
 
 > **Note**
 > El usuario root es siempre un usuario de altos privilegios.
 
 - **¿Que es markdown?**
-  Es una forma sencilla de agregar formato a textos en la web y funciona incorporando algunos caracteres a nuestro contenido.
+  Es una forma sencilla de agregar formato a textos en la web y funciona
+  incorporando algunos caracteres a nuestro contenido.
 
 - **Bash y Zsh**
-  Bash (acrónimo de Bourne-Again Shell) es un intérprete de comandos y lenguaje de programación integrado que corre bajo el macroprocesador Shell de Unix. Este programa ejecuta una a una las órdenes que el usuario pone en una ventana de texto o las que se encuentran contenidas en un script o bash script (archivo con todas las instrucciones), para luego devolver los resultados.
-  ZSH, también llamado Z shell, es una versión extendida de Bourne Shell (sh), con muchas características nuevas y soporte para plugins y temas. Dado que se basa en el mismo shell que Bash, ZSH tiene muchas de las mismas características.
+  Bash (acrónimo de Bourne-Again Shell) es un intérprete de comandos y lenguaje
+  de programación integrado que corre bajo el macroprocesador Shell de Unix.
+  Este programa ejecuta una a una las órdenes que el usuario pone en una ventana
+  de texto o las que se encuentran contenidas en un script o bash script
+  (archivo con todas las instrucciones), para luego devolver los resultados.
+  ZSH, también llamado Z shell, es una versión extendida de Bourne Shell (sh),
+  con muchas características nuevas y soporte para plugins y temas. Dado que se
+  basa en el mismo shell que Bash, ZSH tiene muchas de las mismas
+  características.
 
 - **Comando cd**
   cd = change directory
-  Este comando te ayuda a moverte o posicionarte dentro de los directorios (folders). Que es lo mismo que buscar folders dentro de Finder
+  Este comando te ayuda a moverte o posicionarte dentro de los directorios
+  (folders). Que es lo mismo que buscar folders dentro de Finder
 
 - **Comando mkdir**
 
@@ -805,7 +838,8 @@ o
 rvm is a shell function from <your-path>
 ```
 
-- en caso que la salida sea diferente anexar estas lineas `.zshrc` (mac default) or `.bashrc` (bash shell)
+- en caso que la salida sea diferente anexar estas lineas `.zshrc` (mac default)
+  or `.bashrc` (bash shell)
 
 ```
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
