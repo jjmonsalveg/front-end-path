@@ -402,7 +402,9 @@ a = [42, 8, 17, 99];
 #### Metodos
 
 1. slice:
-   El propósito de este método es, como su nombre indica, cortar un trozo del array. Es decir que con slice podemos definir una sección del array que queremos mantener, eliminando los elementos restantes. _Ejemplo:_
+   El propósito de este método es, como su nombre indica, cortar un trozo del
+   array. Es decir que con slice podemos definir una sección del array que
+   queremos mantener, eliminando los elementos restantes. _Ejemplo:_
 
 ```javascript
 a.slice(1);
@@ -410,7 +412,9 @@ console.log(a); // [8, 17, 99]
 ```
 
 2. lenght:
-   Length es la propiedad de una función objeto, e indica el número de argumentos que una función requiere, por ejemplo, el número de parámetros formales. _Ejemplo:_
+   Length es la propiedad de una función objeto, e indica el número de
+   argumentos que una función requiere, por ejemplo, el número de parámetros
+   formales. _Ejemplo:_
 
 ```javascript
 a.length;
@@ -567,7 +571,7 @@ result;
 
 2. Usando metodos strings
 
-````javascript
+```javascript
 const zipCode = /\d{5}/;
 //zipCode = /\d{5}/g; /*busquedas globales */
 let s = "Beverly Hills 90210 was a '90s TV show set in Los Angeles.";
@@ -575,37 +579,52 @@ s += " 91125 is another ZIP code in the Los Angeles area.";
 s.match(zipCode);
 !!s.match(zipCode); /*verfica si hay coincidencia o no*/
 ```
+
 #### Estructuras de repeticion
 
 - for:
+
 ```javascript
 for (let i = 0; i < array.length; i++) {
-    console.log(array[i]);
+ console.log(array[i]);
 }
 ```
+
 - forEach:
+
 ```javascript
-array.forEach(function(element){
-    console.log(element);
-    }
-)
+array.forEach(function (element) {
+ console.log(element);
+});
 ```
+
 - for-of:
 
 ```javascript
-for(element of array){
-    console.log(element);
+for (element of array) {
+ console.log(element);
 }
 ```
+
 #### Objects
 
 ```javascript
-let user = {"firstName": "Michael", "lastName": "Hartl" };
-user["lastName"]
-user.lastName  //esta notacion es equivalente a la linea anterior
+let user = { firstName: "Michael", lastName: "Hartl" };
+user["lastName"];
+user.lastName; //esta notacion es equivalente a la linea anterior
 
-testObject = new Object({ firstName: 'Michael', lastName: 'Hartl' });
-````
+testObject = new Object({ firstName: "Michael", lastName: "Hartl" });
+```
+
+```javascript
+// constructor
+function Phrase(content) {
+ this.content = content;
+}
+
+let greeting = new Phrase("Hello, world!");
+greeting.content;
+```
 
 #### Funciones
 
@@ -645,6 +664,40 @@ uniques.set(word, 1);
 
 ```javascript
 uniques.set(word, uniques.get(word) + 1);
+```
+
+#### map function
+
+```javascript
+[1, 2, 3, 4].map(function (n) {
+ return n * n;
+});
+
+[1, 2, 3, 4].map((n) => {
+ return n * n;
+});
+
+// prettier-ignore
+[1, 2, 3, 4].map(n => n * n);
+```
+
+#### filter function
+
+```javascript
+[1, 2, 3, 4, 5, 6, 7, 8].filter((n) => n % 2 === 1);
+//[ 1, 3, 5, 7 ]
+
+//filter even values
+[1, 2, 3, 4, 5, 6, 7, 8].filter((n) => {
+ return n % 2 === 1;
+});
+// [ 1, 3, 5, 7 ]
+
+//filter odd values
+[1, 2, 3, 4, 5, 6, 7, 8].filter(function (n) {
+ return n % 2 === 1;
+});
+//[ 1, 3, 5, 7 ]
 ```
 
 #### REPL
