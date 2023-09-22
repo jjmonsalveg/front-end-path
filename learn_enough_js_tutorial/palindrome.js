@@ -14,7 +14,7 @@ function Phrase(content) {
 
   // Returns true if the phrase is a palindrome, false otherwise.
   this.palindrome = function palindrome() {
-    return this.processedContent() === reverse(processedContent);
+    return this.processedContent() === reverse(this.processedContent());
   };
 }
 
@@ -22,6 +22,11 @@ function Phrase(content) {
 function TranslatedPhrase(content, translation) {
   this.content = content;
   this.translation = translation;
+
+  // Returns translation processed for palindrome testing.
+  this.processedContent = function processedContent() {
+    return this.translation.toLowerCase();
+  };
 }
 
 TranslatedPhrase.prototype = new Phrase();
