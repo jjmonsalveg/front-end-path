@@ -254,8 +254,8 @@ beginning and ending tags, like this:
 
 | Year |                 Version                 |
 | ---- | :-------------------------------------: |
-| 1989 |      Tim Berners-Lee invented www       |
 | 1991 |      Tim Berners-Lee invented HTML      |
+| 1989 |      Tim Berners-Lee invented www       |
 | 1993 |      Dave Raggett drafted HTML+ .       |
 | 1995 |   HTML Working Group defined HTML 2.0   |
 | 1997 |     W3C Recommendation: HTML 3.2 .      |
@@ -370,7 +370,14 @@ flex: <flex-grow> <flex-shrink> <flex-basis>;
 <p align="center">
   <img src="images/learn-enough-html/flexbox/flex-props.png">
 </p>
-#### links y Recursos
+
+#### Grid
+
+<p align="center">
+  <img src="images/learn-enough-html/grid/alignment.png">
+</p>
+
+#### Links y Recursos
 
 - https://www.cssmatic.com/
 - [caracteres Unicode](https://symbl.cc/en/)
@@ -419,8 +426,7 @@ console.log(a); // [8, 17, 99]
    formales. _Ejemplo:_
 
 ```javascript
-a.length;
-console.log(a); // 4
+console.log(a.length); // 4
 ```
 
 3. includes:
@@ -428,11 +434,11 @@ console.log(a); // 4
    true o false según corresponda. _Ejemplo:_
 
 ```javascript
-a.includes(1);
-console.log(a); // false debido a que el numero 1 no es un elemento del array
+// false debido a que el numero 1 no es un elemento del array
+console.log(a.includes(1));
 
-a.includes(42);
-console.log(a); // true
+// true
+console.log(a.includes(42));
 ```
 
 4. reverse:
