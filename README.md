@@ -700,6 +700,17 @@ uniques.set(word, uniques.get(word) + 1);
 //[ 1, 3, 5, 7 ]
 ```
 
+#### Reduce function
+
+```javascript
+// sum of the first ten elements
+[1, 2, 3, 4, 5, 6, 7, 8].reduce(function (total, n) {
+ return (total += n);
+}, 0);
+
+[1, 2, 3, 4, 5, 6, 7, 8].reduce((total, n) => (total += n), 0);
+```
+
 #### REPL
 
 1. Cargar archivos
