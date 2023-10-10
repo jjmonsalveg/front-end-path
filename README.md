@@ -441,8 +441,8 @@ a = [42, 8, 17, 99];
    ```
 
 3. includes:
-   Este método determina si una matriz incluye un determinado elemento, devuelve
-   true o false según corresponda. _Ejemplo:_
+   Este método determina si una matriz incluye un determinado elemento,
+   devuelve true o false según corresponda. _Ejemplo:_
 
    ```javascript
    // false debido a que el numero 1 no es un elemento del array
@@ -745,6 +745,38 @@ uniques.set(word, uniques.get(word) + 1);
 ```javascript
 .load nombre-del-archivo.js
 ```
+
+#### General information
+
+- Requerir archivos/modulos desde otros archivos
+
+```javascript
+requiere <module_name>
+```
+
+- Para crear un modulo:
+  - Crear un directorio con el nombre del modulo
+  - Adentro de este directorio crear un `index.js`
+  - Correr el comando `npm init`
+  - Completar el wizard
+  - un package.json debe ser creado con la configracion elegida
+  - cuando quieras exportar una clase usar:
+    ```javascript
+    module.exports = NameClass;
+    ```
+
+#### TDD
+
+1. Install mocha:
+
+```bash
+npm install --global mocha
+```
+
+note: The general rule regarding NPM modules is to install them globally if you
+just want access to the corresponding executable—in this case, mocha—and
+install them locally (by omitting the --global flag) if you want the module to
+be part of your current project.
 
 #### Recursos
 
