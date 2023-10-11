@@ -1,4 +1,4 @@
-modulo.exports = Phrase;
+module.exports = Phrase;
 
 // Reverses a string
 function reverse(string) {

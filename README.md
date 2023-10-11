@@ -755,14 +755,22 @@ requiere <module_name>
 ```
 
 - Para crear un modulo:
+
   - Crear un directorio con el nombre del modulo
   - Adentro de este directorio crear un `index.js`
   - Correr el comando `npm init`
   - Completar el wizard
   - un package.json debe ser creado con la configracion elegida
   - cuando quieras exportar una clase usar:
+
     ```javascript
     module.exports = NameClass;
+    ```
+
+  - usar require para importar el modulo donde se va a usar
+
+    ```javascript
+    let NameClass = require("file.js");
     ```
 
 #### TDD
@@ -846,6 +854,7 @@ be part of your current project.
 - **¿Que es markdown?**
   Es una forma sencilla de agregar formato a textos en la web y funciona
   incorporando algunos caracteres a nuestro contenido.
+  [cheatsheet](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#what)
 
 - **Bash y Zsh**
   Bash (acrónimo de Bourne-Again Shell) es un intérprete de comandos y lenguaje
@@ -857,11 +866,19 @@ be part of your current project.
   con muchas características nuevas y soporte para plugins y temas. Dado que se
   basa en el mismo shell que Bash, ZSH tiene muchas de las mismas
   características.
+  Bash (acrónimo de Bourne-Again Shell) es un intérprete de comandos y lenguaje
+  de programación integrado que corre bajo el macroprocesador Shell de Unix.
+  Este programa ejecuta una a una las órdenes que el usuario pone en una ventana
+  de texto o las que se encuentran contenidas en un script o bash script
+  (archivo con todas las instrucciones), para luego devolver los resultados.
+  ZSH, también llamado Z shell, es una versión extendida de Bourne Shell (sh),
+  con muchas características nuevas y soporte para plugins y temas. Dado que se
+  basa en el mismo shell que Bash, ZSH tiene muchas de las mismas
+  características.
 
 - **Comando cd**
-  cd = change directory
-  Este comando te ayuda a moverte o posicionarte dentro de los directorios
-  (folders). Que es lo mismo que buscar folders dentro de Finder
+  cd = change directory Este comando te ayuda a moverte o posicionarte dentro de
+  los directorios (folders). Que es lo mismo que buscar folders dentro de Finder
 
 - **Comando mkdir**
 
