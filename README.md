@@ -377,6 +377,10 @@ flex: <flex-grow> <flex-shrink> <flex-basis>;
   <img src="images/learn-enough-html/grid/alignment.png">
 </p>
 
+<p align="center">
+  <img src="images/learn-enough-html/grid/auto-types.png">
+</p>
+
 #### Links y Recursos
 
 - https://www.cssmatic.com/

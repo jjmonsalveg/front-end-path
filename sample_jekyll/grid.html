@@ -9,10 +9,14 @@
                 grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
                 grid-auto-rows: minmax(10em, 1fr);
                 grid-gap: 1em;
+                grid-auto-flow: dense;
             }
 
             .grid > div {
                 border: 1px solid #000;
+            }
+            .grid-feature {
+                grid-column: span 2;
             }
         </style>
     </head>
@@ -22,7 +26,7 @@
                 <h2>Big news today</h2>
                 Quick sync win-win-win or workflow ecosystem.
             </div>
-            <div>
+            <div class="grid-feature">
                 <h2>
                     We are really excited to announce that we will soon have an
                     exciting announcement!
@@ -49,6 +53,12 @@
             </div>
             <div>1</div>
             <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
         </div>
     </body>
 </html>
