@@ -1054,3 +1054,4 @@ nvm ls
 - configurar consola
 - configurar rvm autocomplete
 - crear un ambiente remoto en aws
+- ver que plugin usar para markdown lint
