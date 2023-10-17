@@ -15,8 +15,7 @@ Para instalar el editor de codigo ve a [VsCode](https://code.visualstudio.com/?w
 - [LiveShare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare):
   Para trabajar en equipo [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced):
 
-- Para previsualizar markdown [Vim
-  emulator](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim):
+- Para previsualizar markdown [Vim emulator](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim):
   emular vim en vscode, este ultimo es opcional porque puede ser dificil de
   usar, para aprender mas movimientos vim vea [este link](https://vim.rtorr.com/)
 
@@ -48,24 +47,24 @@ Para instalar el editor de codigo ve a [VsCode](https://code.visualstudio.com/?w
 
 1. Se instala Homebrew [click aquí](https://brew.sh/)
 
-- Abrir el terminal de macOS
-- Pegar el siguiente comando en el terminal:
+   - Abrir el terminal de macOS
+   - Pegar el siguiente comando en el terminal:
 
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
 
 2. Se instala Git
 
 - Luego de haber instalado Homebrew pegamos en la consola el siguiente comando:
 
-```
+```bash
 brew install git
 ```
 
 #### Ubuntu
 
-##### Pasos para instalar Git en sistema operativo Ubuntu.
+##### Pasos para instalar Git en sistema operativo Ubuntu
 
 - **1.** Desde tu consola , instala Git mediante los siguientes comandos:
 
@@ -74,7 +73,8 @@ sudo apt-get update
 sudo apt-get install git
 ```
 
-- **2.** Escribe **git --version** para verificar la versión y que esta se haya instalado correctamente.
+- **2.** Escribe **git --version** para verificar la versión y que esta se haya
+- instalado correctamente.
 
 Debe salirte la version de git instalada. ejemplo de salida: **git version 2.9.2**
 
@@ -82,14 +82,14 @@ Debe salirte la version de git instalada. ejemplo de salida: **git version 2.9.2
 
 1. Copiar y pegar en tu terminal editando tu username e email:
 
-```shell
- git config --global core.editor "vim"
- git config --global push.default upstream
- git config --global merge.conflictstyle diff3
- git config --global user.name <tu_username>
- git config --global user.email <tu-email>
- git config --global push.default current
-```
+   ```shell
+        git config --global core.editor "vim"
+        git config --global push.default upstream
+        git config --global merge.conflictstyle diff3
+        git config --global user.name <tu_username>
+        git config --global user.email <tu-email>
+        git config --global push.default current
+   ```
 
 2. Chequear datos con el siguiente comando:
 
@@ -100,7 +100,8 @@ git config --list
 ### Comandos
 
 - **git init:**
-- **git add:** añade cambios de archivos en tu directorio. En el siguiente ejemplo se añaden todos los cambios realizados:
+- **git add:** añade cambios de archivos en tu directorio. En el siguiente
+  ejemplo se añaden todos los cambios realizados:
 
 ```shell
 git add
@@ -114,15 +115,17 @@ git add
 git commit -m "Comprometer cambios añadidos"
 ```
 
-_El comentario que se haga se sugiere hacerlo como un mandato_
+Note: **el comentario que se haga se sugiere hacerlo como un mandato**
 
-- **git status:** te muestra el estado de los archivos en el index en comparación con los del directorio de trabajo.
+- **git status:** te muestra el estado de los archivos en el index en
+  comparación con los del directorio de trabajo.
 
 ```shell
 git status
 ```
 
-- **git pull:** Fusiona todos los cambios que se han hecho en el repositorio remoto con el directorio de trabajo local.
+- **git pull:** Fusiona todos los cambios que se han hecho en el repositorio
+  remoto con el directorio de trabajo local.
 
 ```shell
 git pull <remoto> <local>
@@ -145,9 +148,9 @@ Es el equivalente a un `fetch` y luego `merge`.
   detalles de la confirmación.
   Algunas opciones que usamos son `--graph` y `--oneline`
 
-- **git checkout -b <nombre de tu nueva rama>:** Crea una nueva rama, y a la vez
-  te lleva a ella. Mismo resultado que usar git branch <nombre de tu nueva rama>
-  y git checkout <nombre de tu nueva rama>, pero con un solo comando.
+- **git checkout -b <nombre-de-tu-nueva-rama>:** Crea una nueva rama, y a la vez
+  te lleva a ella. Mismo resultado que usar git branch <nombre-de-tu-nueva-rama>
+  y git checkout <nombre-de-tu-nueva-rama>, pero con un solo comando.
 
 ```shell
 git checkout -b <nombre de tu nueva rama>
@@ -204,7 +207,8 @@ git remote prune origin  # limpiar local removiendo
    chmod  600 ~/.ssh/config
    ```
 
-5. Por cada ssh key añadir al ssh-agent y almacenar su passphrase en la keychain ejemplo:
+5. Por cada ssh key añadir al ssh-agent y almacenar su passphrase en la keychain
+   ejemplo:
 
    ```shell
    ssh-add --apple-use-keychain  ~/.ssh/github
@@ -218,9 +222,10 @@ git remote prune origin  # limpiar local removiendo
 <p align="center">
   <img src="images/readme/merge_to_main.png">
 </p>
+
 ## Recursos y referencias
 
-### Git
+### git
 
 - [Tutorial interactivo](https://learngitbranching.js.org/)
 - [Rebase vs merge](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
@@ -272,23 +277,24 @@ beginning and ending tags, like this:
 | 2017 | W3C Recommendation: HTML5.1 2nd Edition |
 | 2017 |       W3C Recommendation: HTML5.2       |
 
-# Tags y notas
+## Tags y notas
 
-```
-<html>	Defines the root of an HTML document
-<body>	Defines the document's body
-<h1> to <h6>	Defines HTML headings
-<p>	Defines a paragraph
-<hr>	Defines a thematic change in the content
-<br>	Inserts a single line break
-<pre>	Defines pre-formatted text
+```text
+<html>          Defines the root of an HTML document
+<body>          Defines the document's body
+<h1> to <h6>    Defines HTML headings
+<p>             Defines a paragraph
+<hr>            Defines a thematic change in the content
+<br>            Inserts a single line break
+<pre>           Defines pre-formatted text
 
 - All HTML elements can have attributes
 - The href attribute of <a> specifies the URL of the page the link goes to
 - The src attribute of <img> specifies the path to the image to be displayed
 - The width and height attributes of <img> provide size information for images
 - The alt attribute of <img> provides an alternate text for an image
-- The style attribute is used to add styles to an element, such as color, font, size, and more
+- The style attribute is used to add styles to an element, such as color, font,
+  size, and more
 - The lang attribute of the <html> tag declares the language of the Web page
 - The title attribute defines some extra information about an element
 ```
@@ -297,18 +303,20 @@ beginning and ending tags, like this:
 
 #### Notas
 
-- borders (a line around the box), margins (the distance away from other boxes), and padding (empty space inside the box separating content from the border).
+- borders (a line around the box), margins (the distance away from other boxes),
+- and padding (empty space inside the box separating content from the border).
 
-- Elements that are considered inline elements, like span or a, are only allowed to
-  have margins and padding applied to the left and right (not top or bottom), and
-  they won’t accept a width or height set by CSS. None of these restrictions
+- Elements that are considered inline elements, like span or a, are only allowed
+  to have margins and padding applied to the left and right (not top or bottom),
+  and they won’t accept a width or height set by CSS. None of these restrictions
   apply to block elements.
 
 <p align="center">
   <img src="images/learn-enough-html/box_model.png">
 </p>
 
-- To check if some fonts are available in you SO please take a look https://www.cssfontstack.com/
+- To check if some fonts are available in you SO please
+  [take a look](https://www.cssfontstack.com/)
 
 #### Layout "standard"
 
@@ -385,31 +393,6 @@ flex: <flex-grow> <flex-shrink> <flex-basis>;
   <img src="images/learn-enough-html/grid/auto-types.png">
 </p>
 
-#### Links y Recursos
-
-- [Semantic versioning](https://semver.org/)
-- [Semantic elements](https://x.com/saidul_dev/status/1699653546218860668?s=52)
-- [Operator lookup](https://www.joshwcomeau.com/operator-lookup/)
-
-#### tools
-
-- [Animaciones css](https://xsgames.co/animatiss/)
-- [Caracteres Unicode](https://symbl.cc/en/)
-- [Component gallery](https://component.gallery/?s=09)
-- [Loaders](http://uiball.com/loaders)
-- [Paleta de colores para un color](https://x.com/midudev/status/1713933396752122032?s=52)
-- [Shell how](https://www.shell.how/)
-- [Web design tools](https://www.cssmatic.com/)
-
-#### Paginas para ejercitar
-
-- [30 day vanilla js coding](https://javascript30.com/)
-- [Algoritmos y estructuras de datos en js](https://github.com/trekhleb/javascript-algorithms/blob/master/README.es-ES.md)
-- [Command challengue](https://cmdchallenge.com/)
-- [Full stack open](https://fullstackopen.com/es/)
-- [JavaScript on Exercism](https://exercism.org/tracks/javascript)
-- [Mastering css grid](https://www.coltsteele.com/tutorials/mastering-css-grid)
-
 ### JavaScript
 
 JavaScript was originally developed by computer scientist Brendan Eich for
@@ -443,31 +426,31 @@ a = [42, 8, 17, 99];
    array. Es decir que con slice podemos definir una sección del array que
    queremos mantener, eliminando los elementos restantes. _Ejemplo:_
 
-```javascript
-a.slice(1);
-console.log(a); // [8, 17, 99]
-```
+   ```javascript
+   a.slice(1);
+   console.log(a); // [8, 17, 99]
+   ```
 
 2. lenght:
    Length es la propiedad de una función objeto, e indica el número de
    argumentos que una función requiere, por ejemplo, el número de parámetros
    formales. _Ejemplo:_
 
-```javascript
-console.log(a.length); // 4
-```
+   ```javascript
+   console.log(a.length); // 4
+   ```
 
 3. includes:
    Este método determina si una matriz incluye un determinado elemento, devuelve
    true o false según corresponda. _Ejemplo:_
 
-```javascript
-// false debido a que el numero 1 no es un elemento del array
-console.log(a.includes(1));
+   ```javascript
+   // false debido a que el numero 1 no es un elemento del array
+   console.log(a.includes(1));
 
-// true
-console.log(a.includes(42));
-```
+   // true
+   console.log(a.includes(42));
+   ```
 
 4. reverse:
 
@@ -475,151 +458,152 @@ console.log(a.includes(42));
    el último y el último pasa a ser el primero. Cabe mencionar que este metodo
    modifica el array original. _Ejemplo:_
 
-```javascript
-a.reverse(); // [99, 17, 8, 42]
+   ```javascript
+   a.reverse(); // [99, 17, 8, 42]
 
-console.log(a); // [99, 17, 8, 42]
-```
+   console.log(a); // [99, 17, 8, 42]
+   ```
 
 5. sort:
 
    Ordenará los números en función de su valor como cadena de texto, no de su
    valor numérico. _Ejemplo:_
 
-```javascript
-a.sort(); // [17, 42, 8, 99]
+   ```javascript
+   a.sort(); // [17, 42, 8, 99]
 
-console.log(a); // [17, 42, 8, 99]
-```
+   console.log(a); // [17, 42, 8, 99]
+   ```
 
-**Nota: como en el ejemplo anterior, este metodo tambien modifica el array original**
+   **Nota: como en el ejemplo anterior, este metodo tambien modifica el array
+   original**
 
-Para personalizar cómo `sort()` ordena los elementos, puedes pasar una función
-de comparación como argumento. La función de comparación debe devolver:
+   Para personalizar cómo `sort()` ordena los elementos, puedes pasar una función
+   de comparación como argumento. La función de comparación debe devolver:
 
-- Un valor negativo si el primer argumento debe aparecer antes que el segundo.
-  En nuestro caso esta función de comparación ordena los número de mayor a
-  menor. _Ejemplo:_
+   - Un valor negativo si el primer argumento debe aparecer antes que el segundo.
+     En nuestro caso esta función de comparación ordena los número de mayor a
+     menor. _Ejemplo:_
 
-```javascript
-a.sort(function (a, b) {
- return b - a;
-});
-console.log(a); // [99, 42, 17, 8]
-```
+   ```javascript
+   a.sort(function (a, b) {
+    return b - a;
+   });
+   console.log(a); // [99, 42, 17, 8]
+   ```
 
-- Un valor positivo si el segundo argumento debe aparecer antes que el primero.
-  En nuestro caso esta función de comparación ordena los número de menor a
-  mayor. _Ejemplo:_
+   - Un valor positivo si el segundo argumento debe aparecer antes que el primero.
+     En nuestro caso esta función de comparación ordena los número de menor a
+     mayor. _Ejemplo:_
 
-```javascript
-a.sort(function (a, b) {
- return a - b;
-});
-console.log(a); // [8, 17, 42, 99]
-```
+   ```javascript
+   a.sort(function (a, b) {
+    return a - b;
+   });
+   console.log(a); // [8, 17, 42, 99]
+   ```
 
-- Cero si ambos argumentos son iguales.
+   - Cero si ambos argumentos son iguales.
 
 6. toSorted()
 
-Como se observó en el ejemplo anterior `.sort() `modifica el array
-original. Si se quiere obtener un array ordenado sin modificar el original, se
-puede usar el método `.toSorted()`. _Ejemplo:_
+   Como se observó en el ejemplo anterior `.sort()` modifica el array
+   original. Si se quiere obtener un array ordenado sin modificar el original, se
+   puede usar el método `.toSorted()`. _Ejemplo:_
 
-```javascript
-let numerosOrdenados = a.toSorted((a, b) => {
- return a - b;
-});
-console.log(numerosOrdenados); // [8, 17, 42, 99]
-```
+   ```javascript
+   let numerosOrdenados = a.toSorted((a, b) => {
+    return a - b;
+   });
+   console.log(numerosOrdenados); // [8, 17, 42, 99]
+   ```
 
 7. push:
 
-El método push() agrega los elementos especificados al final de un array y
-devuelve la nueva longitud del array. Afecta el original. _Ejemplo:_
+   El método push() agrega los elementos especificados al final de un array y
+   devuelve la nueva longitud del array. Afecta el original. _Ejemplo:_
 
-```javascript
-a = [42, 8, 17, 99];
-a.push(12);
-// a -> [42, 8, 17, 99, 12];
-```
+   ```javascript
+   a = [42, 8, 17, 99];
+   a.push(12);
+   // a -> [42, 8, 17, 99, 12];
+   ```
 
 8. pop:
    El método pop() elimina el último elemento de un array y devuelve ese elemento.
    Este método cambia la longitud del array. Afecta el original. _Ejemplo:_
 
-```javascript
-a = [42, 8, 17, 99];
-a.pop();
-//a -> [42, 8, 17];
-```
+   ```javascript
+   a = [42, 8, 17, 99];
+   a.pop();
+   //a -> [42, 8, 17];
+   ```
 
 9. join:
 
-El método join() crea y devuelve un nuevo string concatenando todos los
-elementos en el array, separados por comas o una cadena de separación
-especificada. Si el array tiene solo un elemento, ese elemento se devolverá sin
-usar el separador. _Ejemplo:_
+   El método join() crea y devuelve un nuevo string concatenando todos los
+   elementos en el array, separados por comas o una cadena de separación
+   especificada. Si el array tiene solo un elemento, ese elemento se devolverá sin
+   usar el separador. _Ejemplo:_
 
-```javascript
-a = ["ant", "bat", "cat", "42"];
-a.join(", ");
-//a -> 'ant, bat, cat, 42';
-```
+   ```javascript
+   a = ["ant", "bat", "cat", "42"];
+   a.join(", ");
+   //a -> 'ant, bat, cat, 42';
+   ```
 
 10. shift:
 
-El método shift() elimina el primer elemento de un array y devuelve ese elemento
-eliminado. Este método cambia la longitud del array. Afecta el original.
+    El método shift() elimina el primer elemento de un array y devuelve ese elemento
+    eliminado. Este método cambia la longitud del array. Afecta el original.
 
-_Ejemplo:_
+    _Ejemplo:_
 
-```javascript
-a = [42, 8, 17, 99];
-a.shift();
-// a -> [8, 17, 99];
-```
+    ```javascript
+    a = [42, 8, 17, 99];
+    a.shift();
+    // a -> [8, 17, 99];
+    ```
 
 11. unshift:
 
-El método unshift() agrega los elementos especificados al comienzo de un array y
-devuelve la nueva longitud del array. Afecta el original. _Ejemplo:_
+    El método unshift() agrega los elementos especificados al comienzo de un
+    array y devuelve la nueva longitud del array. Afecta el original. _Ejemplo:_
 
-```javascript
-a = [42, 8, 17, 99];
-a.unshift(51);
-a -> [51, 42, 8, 17, 99];
-```
+    ```javascript
+    a = [42, 8, 17, 99];
+    a.unshift(51);
+    a -> [51, 42, 8, 17, 99];
+    ```
 
 12. from:
 
-```javascript
-Array.from("honey badger");
-//[ 'h', 'o', 'n', 'e', 'y', ' ', 'b', 'a', 'd', 'g', 'e', 'r' ]
-```
+    ```javascript
+    Array.from("honey badger");
+    //[ 'h', 'o', 'n', 'e', 'y', ' ', 'b', 'a', 'd', 'g', 'e', 'r' ]
+    ```
 
 #### Regex
 
 1. Usando `RegExp` object
 
-```javascript
-let zipCode = new RegExp("\\d{5}");
-let result = zipCode.exec("Beverly Hills 90210");
-result;
-//[ '90210', index: 14, input: 'Beverly Hills 90210' ]
-```
+   ```javascript
+   let zipCode = new RegExp("\\d{5}");
+   let result = zipCode.exec("Beverly Hills 90210");
+   result;
+   //[ '90210', index: 14, input: 'Beverly Hills 90210' ]
+   ```
 
 2. Usando metodos strings
 
-```javascript
-const zipCode = /\d{5}/;
-//zipCode = /\d{5}/g; /*busquedas globales */
-let s = "Beverly Hills 90210 was a '90s TV show set in Los Angeles.";
-s += " 91125 is another ZIP code in the Los Angeles area.";
-s.match(zipCode);
-!!s.match(zipCode); /*verfica si hay coincidencia o no*/
-```
+   ```javascript
+   const zipCode = /\d{5}/;
+   //zipCode = /\d{5}/g; /*busquedas globales */
+   let s = "Beverly Hills 90210 was a '90s TV show set in Los Angeles.";
+   s += " 91125 is another ZIP code in the Los Angeles area.";
+   s.match(zipCode);
+   !!s.match(zipCode); /*verfica si hay coincidencia o no*/
+   ```
 
 #### Estructuras de repeticion
 
@@ -765,8 +749,31 @@ uniques.set(word, uniques.get(word) + 1);
 #### Recursos
 
 - [Documentacion MDF](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Semantic versioning](https://semver.org/)
+- [Semantic elements](https://x.com/saidul_dev/status/1699653546218860668?s=52)
 - [NPM](https://www.npmjs.com/)
+- [Operator lookup](https://www.joshwcomeau.com/operator-lookup/)
 - [Udemy course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595350?start=0#overview)
+
+#### tools
+
+- [Animaciones css](https://xsgames.co/animatiss/)
+- [Caracteres Unicode](https://symbl.cc/en/)
+- [Component gallery](https://component.gallery/?s=09)
+- [Loaders](http://uiball.com/loaders)
+- [Paleta de colores para un color](https://x.com/midudev/status/1713933396752122032?s=52)
+- [Shell how](https://www.shell.how/)
+- [Web design tools](https://www.cssmatic.com/)
+
+#### Paginas para ejercitar
+
+- [30 day vanilla js coding](https://javascript30.com/)
+- [Algoritmos y estructuras de datos en js](https://github.com/trekhleb/javascript-algorithms/blob/master/README.es-ES.md)
+- [Command challengue](https://cmdchallenge.com/)
+- [Edicion de imagenes gratuita](https://evernote.com/products/skitch)
+- [Full stack open](https://fullstackopen.com/es/)
+- [JavaScript on Exercism](https://exercism.org/tracks/javascript)
+- [Mastering css grid](https://www.coltsteele.com/tutorials/mastering-css-grid)
 
 ## Glosario
 
@@ -840,10 +847,6 @@ padres no existan tambien los crea:
 mkdir -p <folder_p1>/<folder_p2>/<folder_p3>/<folder>
 ```
 
-## Herramientas
-
-- Edicion de imagenes gratuita https://evernote.com/products/skitch
-
 ## Jekyll
 
 ### Dependencias
@@ -864,20 +867,20 @@ type rvm | head -n 1
 
 la salida debe ser algo igual a
 
-```
+```bash
 rvm is a function
 ```
 
 o
 
-```
+```bash
 rvm is a shell function from <your-path>
 ```
 
 - en caso que la salida sea diferente anexar estas lineas `.zshrc` (mac default)
   or `.bashrc` (bash shell)
 
-```
+```vim
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$GEM_HOME/bin:$PATH"
@@ -894,16 +897,16 @@ rvm get head      # last rvm version(may be no stable)
 Instalar versiones de ruby
 
 ```shell
-rvm list known		 	     # list ruby versions
-rvm install <version_ruby> 	 # install a specific version
-rvm list    				 # list installed versions
+rvm list known               # list ruby versions
+rvm install <version_ruby>   # install a specific version
+rvm list                     # list installed versions
 rvm uninstall <version_ruby> # uninstall version withouth remove doc
 rvm remove    <version_ruby> # uninstall version removing doc
 ```
 
 establecer la version del sistema operativo por default
 
-```
+```bash
 rvm --default use 3.2.2
 ```
 
@@ -917,7 +920,7 @@ rvm gemset list
 rvm --create --ruby-version use <version_ruby>@<gemset_name>
 ```
 
-### Instalacion
+### Instalacion Jekyll
 
 - Instalar openssl usando este comando (solo para Mac):
 
@@ -945,11 +948,11 @@ cd sample_website
  bundle _2.2.17_ exec jekyll serve
 ```
 
-- copiar en el navegador: http://127.0.0.1:4000/
+- click: [localhost](http://127.0.0.1:4000/)
 
 - Para salir de jekyll server presiona Ctrl + c
 
-# Instalacion de node
+## Instalacion de node
 
 - Instalar node usando [nvm](https://github.com/nvm-sh/nvm#install--update-script)
 - [check the installation](https://github.com/nvm-sh/nvm#verify-installation)
@@ -970,7 +973,7 @@ nvm ls
 
 - (optional) [autoload nvm version](https://github.com/nvm-sh/nvm#zsh)
 
-# TODO.
+## TODO
 
 - configurar consola
 - configurar rvm autocomplete
