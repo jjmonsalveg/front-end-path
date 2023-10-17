@@ -33,8 +33,12 @@ Para instalar el editor de codigo ve a [VsCode](https://code.visualstudio.com/?w
       },
   ```
 
-recuerde que la linea previa debe terminar con coma, porque en json cada
-elemento esta separado por comas.
+  recuerde que la linea previa debe terminar con coma, porque en json cada
+  elemento esta separado por comas.
+
+- [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
+  Description: Hosts a local server in your workspace for you to preview your
+  webpages on.
 
 ## Git
 
@@ -383,8 +387,28 @@ flex: <flex-grow> <flex-shrink> <flex-basis>;
 
 #### Links y Recursos
 
-- https://www.cssmatic.com/
-- [caracteres Unicode](https://symbl.cc/en/)
+- [Semantic versioning](https://semver.org/)
+- [Semantic elements](https://x.com/saidul_dev/status/1699653546218860668?s=52)
+- [Operator lookup](https://www.joshwcomeau.com/operator-lookup/)
+
+#### tools
+
+- [Animaciones css](https://xsgames.co/animatiss/)
+- [Caracteres Unicode](https://symbl.cc/en/)
+- [Component gallery](https://component.gallery/?s=09)
+- [Loaders](http://uiball.com/loaders)
+- [Paleta de colores para un color](https://x.com/midudev/status/1713933396752122032?s=52)
+- [Shell how](https://www.shell.how/)
+- [Web design tools](https://www.cssmatic.com/)
+
+#### Paginas para ejercitar
+
+- [30 day vanilla js coding](https://javascript30.com/)
+- [Algoritmos y estructuras de datos en js](https://github.com/trekhleb/javascript-algorithms/blob/master/README.es-ES.md)
+- [Command challengue](https://cmdchallenge.com/)
+- [Full stack open](https://fullstackopen.com/es/)
+- [JavaScript on Exercism](https://exercism.org/tracks/javascript)
+- [Mastering css grid](https://www.coltsteele.com/tutorials/mastering-css-grid)
 
 ### JavaScript
 
