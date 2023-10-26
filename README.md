@@ -782,7 +782,7 @@ requiere <module_name>
   - Adentro de este directorio crear un `index.js`
   - Correr el comando `npm init`
   - Completar el wizard
-  - un package.json debe ser creado con la configracion elegida
+  - Un package.json debe ser creado con la configuracion elegida
   - cuando quieras exportar una clase usar:
 
     ```javascript
