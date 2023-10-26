@@ -795,6 +795,11 @@ requiere <module_name>
     let NameClass = require("file.js");
     ```
 
+- Para publicar un modulo:
+  - Asegurarnos que estamos registrados en [npmjs](https://www.npmjs.com/)
+  - correr el comando npm adduser <nombre-usuario>
+  - Publicar con `npm publish`
+
 #### TDD
 
 1. Install mocha:
