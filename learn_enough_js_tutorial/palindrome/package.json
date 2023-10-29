@@ -1,0 +1,25 @@
+{
+  "name": "front-end-path-palindrome",
+  "version": "0.1.0",
+  "description": "Palindrome detector",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjmonsalveg/front-end-path.git"
+  },
+  "keywords": [
+    "palindrome",
+    "learn-enough",
+    "javascript",
+    "front-end-path"
+  ],
+  "author": "@front-end-path-course",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjmonsalveg/front-end-path/issues"
+  },
+  "homepage": "https://github.com/jjmonsalveg/front-end-path#readme"
+}

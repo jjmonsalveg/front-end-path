@@ -441,8 +441,8 @@ a = [42, 8, 17, 99];
    ```
 
 3. includes:
-   Este método determina si una matriz incluye un determinado elemento, devuelve
-   true o false según corresponda. _Ejemplo:_
+   Este método determina si una matriz incluye un determinado elemento,
+   devuelve true o false según corresponda. _Ejemplo:_
 
    ```javascript
    // false debido a que el numero 1 no es un elemento del array
@@ -605,6 +605,28 @@ a = [42, 8, 17, 99];
    !!s.match(zipCode); /*verfica si hay coincidencia o no*/
    ```
 
+#### Estructuras de decision
+
+```javascript
+if (condition) {
+ //  block of code to be executed if the condition is true
+}
+
+if (condition) {
+ //  block of code to be executed if the condition is true
+} else {
+ //  block of code to be executed if the condition is false
+}
+
+if (condition1) {
+ //  block of code to be executed if condition1 is true
+} else if (condition2) {
+ //  block of code to be executed if the condition1 is false and condition2 is true
+} else {
+ //  block of code to be executed if the condition1 is false and condition2 is false
+}
+```
+
 #### Estructuras de repeticion
 
 - for:
@@ -746,6 +768,51 @@ uniques.set(word, uniques.get(word) + 1);
 .load nombre-del-archivo.js
 ```
 
+#### General information
+
+- Requerir archivos/modulos desde otros archivos
+
+```javascript
+requiere <module_name>
+```
+
+- Para crear un modulo:
+
+  - Crear un directorio con el nombre del modulo
+  - Adentro de este directorio crear un `index.js`
+  - Correr el comando `npm init`
+  - Completar el wizard
+  - Un package.json debe ser creado con la configuracion elegida
+  - cuando quieras exportar una clase usar:
+
+    ```javascript
+    module.exports = NameClass;
+    ```
+
+  - usar require para importar el modulo donde se va a usar
+
+    ```javascript
+    let NameClass = require("file.js");
+    ```
+
+- Para publicar un modulo:
+  - Asegurarnos que estamos registrados en [npmjs](https://www.npmjs.com/)
+  - correr el comando npm adduser <nombre-usuario>
+  - Publicar con `npm publish`
+
+#### TDD
+
+1. Install mocha:
+
+```bash
+npm install --global mocha
+```
+
+note: The general rule regarding NPM modules is to install them globally if you
+just want access to the corresponding executable—in this case, mocha—and
+install them locally (by omitting the --global flag) if you want the module to
+be part of your current project.
+
 #### Recursos
 
 - [Documentacion MDF](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -814,6 +881,7 @@ uniques.set(word, uniques.get(word) + 1);
 - **¿Que es markdown?**
   Es una forma sencilla de agregar formato a textos en la web y funciona
   incorporando algunos caracteres a nuestro contenido.
+  [cheatsheet](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#what)
 
 - **Bash y Zsh**
   Bash (acrónimo de Bourne-Again Shell) es un intérprete de comandos y lenguaje
@@ -825,11 +893,19 @@ uniques.set(word, uniques.get(word) + 1);
   con muchas características nuevas y soporte para plugins y temas. Dado que se
   basa en el mismo shell que Bash, ZSH tiene muchas de las mismas
   características.
+  Bash (acrónimo de Bourne-Again Shell) es un intérprete de comandos y lenguaje
+  de programación integrado que corre bajo el macroprocesador Shell de Unix.
+  Este programa ejecuta una a una las órdenes que el usuario pone en una ventana
+  de texto o las que se encuentran contenidas en un script o bash script
+  (archivo con todas las instrucciones), para luego devolver los resultados.
+  ZSH, también llamado Z shell, es una versión extendida de Bourne Shell (sh),
+  con muchas características nuevas y soporte para plugins y temas. Dado que se
+  basa en el mismo shell que Bash, ZSH tiene muchas de las mismas
+  características.
 
 - **Comando cd**
-  cd = change directory
-  Este comando te ayuda a moverte o posicionarte dentro de los directorios
-  (folders). Que es lo mismo que buscar folders dentro de Finder
+  cd = change directory Este comando te ayuda a moverte o posicionarte dentro de
+  los directorios (folders). Que es lo mismo que buscar folders dentro de Finder
 
 - **Comando mkdir**
 
