@@ -39,6 +39,8 @@ Para instalar el editor de codigo ve a [VsCode](https://code.visualstudio.com/?w
   Description: Hosts a local server in your workspace for you to preview your
   webpages on.
 
+- [Markdown Lint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+
 ## Git
 
 ### Instalacion
@@ -1052,4 +1054,3 @@ nvm ls
 - configurar consola
 - configurar rvm autocomplete
 - crear un ambiente remoto en aws
-- ver que plugin usar para markdown lint
