@@ -691,10 +691,8 @@ myAwesomeFunctionName("myRealArguments")
 
 - Declaracion
 
-let uniques = new Map();
-
 ```javascript
-
+let uniques = new Map();
 ```
 
 - comprobar existencia de key
