@@ -395,6 +395,18 @@ flex: <flex-grow> <flex-shrink> <flex-basis>;
   <img src="images/learn-enough-html/grid/auto-types.png">
 </p>
 
+##### Definicion de posicionamiento columna y fila
+
+```css
+grid-column-start: 2;
+grid-column-end: 4;
+
+grid-column: 2 / 4; /* shorthand */
+
+/* grid also have this notation*/
+grid-row: 1 / 3;
+```
+
 ### JavaScript
 
 JavaScript was originally developed by computer scientist Brendan Eich for
