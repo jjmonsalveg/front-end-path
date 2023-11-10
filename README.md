@@ -813,6 +813,39 @@ just want access to the corresponding executable—in this case, mocha—and
 install them locally (by omitting the --global flag) if you want the module to
 be part of your current project.
 
+#### JS and DOM/html
+
+Para usar require necesitamos instalar browserify
+
+```bash
+npm install --global browserify
+```
+
+transformar un archivo
+
+```bash
+ browserify main.js -o bundle.js
+```
+
+para evitar correr el comando todo el tiempo podemos usar
+
+```bash
+npm i watchify
+```
+
+y para convertir en tiempo en real
+
+```bash
+watchify main.js -o bundle.js -v
+```
+
+si la consola no consigue los comandos podemos colocar como prefijo el path
+local
+
+```bash
+node_modules/.bin/watchify main.js -o bundle.js -v
+```
+
 #### Recursos
 
 - [Documentacion MDF](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
