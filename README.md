@@ -1087,3 +1087,4 @@ nvm ls
 - configurar consola
 - configurar rvm autocomplete
 - crear un ambiente remoto en aws
+- Hacer curso de Jquery(w3school)
