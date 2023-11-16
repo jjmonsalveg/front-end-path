@@ -671,6 +671,9 @@ function Phrase(content) {
 
 let greeting = new Phrase("Hello, world!");
 greeting.content;
+
+// herencia
+TranslatedPhrase.prototype = new Phrase();
 ```
 
 #### Funciones
@@ -691,10 +694,8 @@ myAwesomeFunctionName("myRealArguments")
 
 - Declaracion
 
-let uniques = new Map();
-
 ```javascript
-
+let uniques = new Map();
 ```
 
 - comprobar existencia de key
@@ -797,7 +798,7 @@ requiere <module_name>
 
 - Para publicar un modulo:
   - Asegurarnos que estamos registrados en [npmjs](https://www.npmjs.com/)
-  - correr el comando npm adduser <nombre-usuario>
+  - correr el comando `npm adduser <nombre-usuario>`
   - Publicar con `npm publish`
 
 #### TDD
@@ -845,6 +846,23 @@ local
 ```bash
 node_modules/.bin/watchify main.js -o bundle.js -v
 ```
+
+#### Selectores y eventos
+
+- `AddEventListener` es para anexar listeners a ciertos eventos
+- `querySelector` es para seleccionar elementos del DOM con selectores css
+
+```JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+  let button = document.querySelector("#palindromeTester");
+  button.addEventListener("click", function () {
+    palindromeTester();
+  });
+});
+
+```
+
+#### Test
 
 #### Recursos
 
