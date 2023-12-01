@@ -862,6 +862,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ```
 
+#### npm commands
+
+```bash
+npm install -g <paquete> # instalarlo de forma global
+npm install <paquete>    # instalarlo localmente en proyecto en node_modules
+npm update <paquete>     # actualizar un paquete en específico (-g para global)
+```
+
 #### Test
 
 #### Recursos
