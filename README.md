@@ -671,6 +671,9 @@ function Phrase(content) {
 
 let greeting = new Phrase("Hello, world!");
 greeting.content;
+
+// herencia
+TranslatedPhrase.prototype = new Phrase();
 ```
 
 #### Funciones
@@ -691,10 +694,8 @@ myAwesomeFunctionName("myRealArguments")
 
 - Declaracion
 
-let uniques = new Map();
-
 ```javascript
-
+let uniques = new Map();
 ```
 
 - comprobar existencia de key
@@ -797,7 +798,7 @@ requiere <module_name>
 
 - Para publicar un modulo:
   - Asegurarnos que estamos registrados en [npmjs](https://www.npmjs.com/)
-  - correr el comando npm adduser <nombre-usuario>
+  - correr el comando `npm adduser <nombre-usuario>`
   - Publicar con `npm publish`
 
 #### TDD
@@ -812,6 +813,64 @@ note: The general rule regarding NPM modules is to install them globally if you
 just want access to the corresponding executable—in this case, mocha—and
 install them locally (by omitting the --global flag) if you want the module to
 be part of your current project.
+
+#### JS and DOM/html
+
+Para usar require necesitamos instalar browserify
+
+```bash
+npm install --global browserify
+```
+
+transformar un archivo
+
+```bash
+ browserify main.js -o bundle.js
+```
+
+para evitar correr el comando todo el tiempo podemos usar
+
+```bash
+npm i watchify
+```
+
+y para convertir en tiempo en real
+
+```bash
+watchify main.js -o bundle.js -v
+```
+
+si la consola no consigue los comandos podemos colocar como prefijo el path
+local
+
+```bash
+node_modules/.bin/watchify main.js -o bundle.js -v
+```
+
+#### Selectores y eventos
+
+- `AddEventListener` es para anexar listeners a ciertos eventos
+- `querySelector` es para seleccionar elementos del DOM con selectores css
+
+```JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+  let button = document.querySelector("#palindromeTester");
+  button.addEventListener("click", function () {
+    palindromeTester();
+  });
+});
+
+```
+
+#### npm commands
+
+```bash
+npm install -g <paquete> # instalarlo de forma global
+npm install <paquete>    # instalarlo localmente en proyecto en node_modules
+npm update <paquete>     # actualizar un paquete en específico (-g para global)
+```
+
+#### Test
 
 #### Recursos
 
@@ -1054,3 +1113,4 @@ nvm ls
 - configurar consola
 - configurar rvm autocomplete
 - crear un ambiente remoto en aws
+- Hacer curso de Jquery(w3school)
