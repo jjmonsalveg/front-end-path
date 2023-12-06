@@ -102,7 +102,11 @@
             }
             .footer {
                 background-color: #ddd;
+                justify-items: center;
                 padding: 4em 1em;
+            }
+            .footer_menu-first {
+                grid-column-start: 3;
             }
         </style>
     </head>
@@ -166,8 +170,8 @@
                 There is magic in it.
             </div>
         </section>
-        <footer class="footer">
-            <h3 class="footer_title">I am a Footer</h3>
+        <footer class="footer grid">
+            <h3 class="footer_title grid_2-8">I am a Footer</h3>
             <ul class="menulist footer_menu-first">
                 <li>Products</li>
                 <li>
