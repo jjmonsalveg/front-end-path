@@ -42,6 +42,10 @@
             .grid_4-6 {
                 grid-column: 4 / 6;
             }
+            .grid_cols-3max {
+                grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+                grid-gap: 3em;
+            }
             .header {
                 background-color: #000;
                 color: #fff;
@@ -134,12 +138,42 @@
                 </div>
             </div>
         </section>
-        <section class="options">
-            <h2 class="options_title">Here are Some Choices</h2>
-            <div class="options_content">
-                <div>Stuff</div>
-                <div>Different Stuff</div>
-                <div>All the Stuff</div>
+        <section class="options grid grid_2-8">
+            <h2 class="options_title grid_2-8">Here are Some Choices</h2>
+            <div class="options_content grid grid_2-8 grid_cols-3max">
+                <div>
+                    <img
+                        src="/images/small/slide1.jpg"
+                        class="options_item-img"
+                    />
+                    <div class="options_item-title">Stuff</div>
+                    <p>
+                        In some high land of lakes. Take almost any path you
+                        please, and ten to one it carries you down in a dale.
+                    </p>
+                </div>
+                <div>
+                    <img
+                        src="/images/small/slide1.jpg"
+                        class="options_item-img"
+                    />
+                    <div class="options_item-title">Different Stuff</div>
+                    <p>
+                        Leaves you there by a pool in the stream. There is magic
+                        in it.
+                    </p>
+                </div>
+                <div>
+                    <img
+                        src="/images/small/slide1.jpg"
+                        class="options_item-img"
+                    />
+                    <div class="options_item-title">All the Stuff</div>
+                    <p>
+                        Set his feet a-going, and he will infallibly lead you to
+                        water, if water there be in all that region.
+                    </p>
+                </div>
             </div>
         </section>
         <section class="info grid">
