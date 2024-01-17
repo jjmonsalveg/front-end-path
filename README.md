@@ -440,6 +440,14 @@ ver el siguiente ejemplo
 ...
 ```
 
+#### Calculos
+
+1. Uso de calc
+
+```
+repeat(auto-fit, minmax(calc(20em - (6em/3)),1fr))
+```
+
 ### JavaScript
 
 JavaScript was originally developed by computer scientist Brendan Eich for
