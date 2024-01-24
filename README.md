@@ -36,8 +36,11 @@ Para instalar el editor de codigo ve a [VsCode](https://code.visualstudio.com/?w
   elemento esta separado por comas.
 
 - [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
+
   Description: Hosts a local server in your workspace for you to preview your
   webpages on.
+
+- [Markdown Lint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
 ## Git
 
@@ -392,6 +395,58 @@ flex: <flex-grow> <flex-shrink> <flex-basis>;
 <p align="center">
   <img src="images/learn-enough-html/grid/auto-types.png">
 </p>
+
+##### Definicion de posicionamiento columna y fila
+
+```css
+grid-column-start: 2;
+grid-column-end: 4;
+
+grid-column: 2 / 4; /* shorthand */
+
+/* grid also have this notation*/
+grid-row: 1 / 3;
+```
+
+##### Nombrando areas
+
+- Usar `grid-template-areas` en una clase "padre" que tendra el div
+  que englobara todas las areas.
+- Todas las areas definidas en `grid-template-areas` son nombres que deben
+  ser usados en otras clases haciendo uso de `grid-area`. Es como que uno
+  "declara" un nombre en `grid-template-areas` y luego lo usa en otra clase
+  con `grid-area`
+
+ver el siguiente ejemplo
+
+```css
+.grid-container {
+ display: grid;
+ grid-template-areas:
+  "header header header"  /* fila 1 */
+  "menu content panel"    /* fila 2 */
+  "footer footer footer"; /* fila 3 */
+ grid-template-columns: 10em 1fr 15em;
+ grid-template-rows: minmax(4em, auto) 1fr auto;
+ min-height: 100vh;
+}
+
+.grid-header {
+ background-color: #ccc;
+ grid-area: header;
+ padding: 1em;
+ text-align: center;
+}
+...
+```
+
+#### Calculos
+
+1. Uso de calc
+
+```
+repeat(auto-fit, minmax(calc(20em - (6em/3)),1fr))
+```
 
 ### JavaScript
 
