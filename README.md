@@ -1163,6 +1163,18 @@ nvm ls
 
 - (optional) [autoload nvm version](https://github.com/nvm-sh/nvm#zsh)
 
+## Colocando enlace simbolico (WARNING!)
+
+```shell
+sudo ln -s $(which node) /usr/local/bin/node
+```
+
+Nota: borrar al finalizar con
+
+```shell
+rm /usr/local/bin/node
+```
+
 ## TODO
 
 - configurar consola
