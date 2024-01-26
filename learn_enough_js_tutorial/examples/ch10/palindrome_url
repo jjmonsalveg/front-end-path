@@ -1,0 +1,24 @@
+#!/usr/local/bin/node
+const { request } = require("urllib");
+let Phrase = require("front-end-path-palindrome");
+const url = "https://cdn.learnenough.com/phrases.txt";
+
+request(url, { followRedirect: true })
+  .then(({ data, res }) => {
+    console.log(res.statusCode);
+    console.log(res.headers);
+
+    let body = data.toString();
+    console.log(body);
+
+    body.split("\n").forEach(function (line) {
+      let phrase = new Phrase(line);
+
+      if (phrase.palindrome()) {
+        console.log("palindrome detected:", line);
+      }
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
