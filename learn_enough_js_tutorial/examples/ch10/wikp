@@ -1,0 +1,32 @@
+#!/usr/local/bin/node
+
+// Returns the paragraphs from a Wikipedia link, stripped of reference numbers.
+//
+const { request } = require("urllib");
+let url = process.argv[2];
+
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+
+request(url, { followRedirect: true })
+  .then(({ data, res }) => {
+    console.log("statusCode: " + res.statusCode);
+    console.log("Headers:" + res.headers);
+
+    let body = data.toString();
+
+    // Simulate a Document Object Model
+    let { document } = new JSDOM(body).window;
+
+    // Grab all the paragraphs and references.
+    let paragraphs = document.querySelectorAll("p");
+    let references = document.querySelectorAll(".reference");
+    console.log(paragraphs);
+    console.log(references);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+console.log("print all arguments to script:");
+process.argv.forEach((arg) => console.log(arg));

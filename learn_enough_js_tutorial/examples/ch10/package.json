@@ -2,6 +2,7 @@
   "dependencies": {
     "front-end-path-palindrome": "^0.1.1",
     "fs": "^0.0.1-security",
+    "jsdom": "^24.0.0",
     "urllib": "^3.22.2"
   }
 }
