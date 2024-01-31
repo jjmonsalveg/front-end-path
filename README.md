@@ -829,7 +829,7 @@ uniques.set(word, uniques.get(word) + 1);
 - Requerir archivos/modulos desde otros archivos
 
 ```javascript
-requiere <module_name>
+require <module_name>
 ```
 
 - Para crear un modulo:
