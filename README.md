@@ -1163,7 +1163,9 @@ nvm ls
 
 - (optional) [autoload nvm version](https://github.com/nvm-sh/nvm#zsh)
 
-## Colocando enlace simbolico (WARNING!)
+## Comandos utiles
+
+### Colocando enlace simbolico de node (WARNING!)
 
 ```shell
 sudo ln -s $(which node) /usr/local/bin/node
@@ -1173,6 +1175,21 @@ Nota: borrar al finalizar con
 
 ```shell
 rm /usr/local/bin/node
+```
+
+### Como modificar un path con el directorio actual
+
+```shell
+PATH=$PATH:$(pwd)
+```
+
+### Redireccionar la salida de un comando a un archivo
+
+```shell
+<comando>  > <nombre-de-archivo>  # sobreescribir/crear archivo
+<comando>  >> <nombre-de-archivo> # Añadir/crear archivo
+
+wikp http://wikipedia.com > article.txt
 ```
 
 ## TODO

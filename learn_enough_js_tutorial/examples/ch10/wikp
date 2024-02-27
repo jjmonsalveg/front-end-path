@@ -4,9 +4,15 @@
 //
 const { request } = require("urllib");
 let url = process.argv[2];
+const is_url_present = !!url;
 
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
+
+if (!is_url_present) {
+  console.log("No URL provided");
+  process.exit(1);
+}
 
 request(url, { followRedirect: true })
   .then(({ data, res }) => {
@@ -21,8 +27,14 @@ request(url, { followRedirect: true })
     // Grab all the paragraphs and references.
     let paragraphs = document.querySelectorAll("p");
     let references = document.querySelectorAll(".reference");
-    console.log(paragraphs);
-    console.log(references);
+
+    references.forEach(function (reference) {
+      reference.remove();
+    });
+
+    paragraphs.forEach(function (paragraph) {
+      console.log(paragraph.textContent);
+    });
   })
   .catch((err) => {
     console.log(err);
