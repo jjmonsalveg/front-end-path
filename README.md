@@ -1192,6 +1192,27 @@ PATH=$PATH:$(pwd)
 wikp http://wikipedia.com > article.txt
 ```
 
+## Configurar un sitio web
+
+### Dominios
+
+- https://www.hover.com/
+- https://www.godaddy.com/es
+- https://www.noip.com/login (2 dominios Top-level domain --TLD-- .dnns gratis)
+
+### Transport layer security (TLS) - Secure Socket Layer (SSL)
+
+- https://letsencrypt.org/docs/
+- https://certbot.eff.org/
+
+### Gestion de acceso a tu sitio
+
+- https://www.cloudflare.com/
+
+### Verificar propagacions de dns
+
+- https://www.whatsmydns.net
+
 ## TODO
 
 - configurar consola
