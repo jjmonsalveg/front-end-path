@@ -182,39 +182,65 @@ git remote prune origin  # limpiar local removiendo
 
 ### Añadiendo ssh keys al ssh-agent
 
+0. Crear llave
+
+  ```shell
+  ssh-keygen -t ed25519 -C "email@correo.com"
+  ```
+  Asegurarse que quede creado
+  ~/.ssh/github
+
 1. Comenzar el ssh-agent en segundo plano
 
    ```shell
    eval "$(ssh-agent -s)"
    ```
 
-2. Abrir el archivo ~/.ssh/config:
+2. Añadir llave al agent
+
+    ```shell
+   ssh-add ~/.ssh/github
+   ```
+   
+3. Añadir la llave publica (~/.ssh/github.pub) a github copiando el contenido del siguiente archivo
+
+    ```shell
+   cat ~/.ssh/github.pub
+   ```
+
+4. Abrir el archivo ~/.ssh/config:
 
    ```shell
    vim ~/.ssh/config
    ```
 
-3. Para cada ssh key añada una entrada similar a esta:
+5. Para cada ssh key añada una entrada similar a esta:
 
    ```shell
    Host github.com
      HostName github.com
      AddKeysToAgent yes
-     UseKeychain yes
+     UseKeychain yes #esta linea solo para Mac
      IdentityFile ~/.ssh/github
    ```
 
-4. Cambiar los permisos del archivo:
+6. Cambiar los permisos del archivo:
 
    ```shell
    chmod  600 ~/.ssh/config
    ```
 
-5. Por cada ssh key añadir al ssh-agent y almacenar su passphrase en la keychain
+7. (Solo para Mac) Por cada ssh key añadir al ssh-agent y almacenar su passphrase en la keychain
    ejemplo:
 
    ```shell
    ssh-add --apple-use-keychain  ~/.ssh/github
+   ```
+
+8. Verificar que puedes hacer login, recuerda aceptar el mensaje
+
+   ```shell
+   ssh -T git@github.com
    ```
 
 ### Estrategias de mezclado
