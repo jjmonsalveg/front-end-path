@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Poder de Visualizar Datos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        max-height: 400px;
+      }
+      @media (min-width: 768px) {
+        .chart-container {
+          height: 350px;
+        }
+      }
+      .gradient-text {
+        background: linear-gradient(to right, #00a0b0, #eb6841);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .bullet-bar {
+        background-color: #00a0b0;
+      }
+      .bullet-target {
+        background-color: #6a4a3c;
+      }
+      .bullet-range-light {
+        background-color: #f0f0f0;
+      }
+      .bullet-range-medium {
+        background-color: #e0e0e0;
+      }
+      .bullet-range-dark {
+        background-color: #d0d0d0;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <header class="text-center py-12 md:py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h1 class="text-4xl md:text-6xl font-black gradient-text">
+          EL PODER DE VISUALIZAR DATOS
+        </h1>
+        <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          De la Complejidad a la Claridad: Una Guía para la Toma de Decisiones
+          Inteligente
+        </p>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+      <section id="porque" class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">
+          ¿Por Qué Visualizar Datos?
+        </h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          La visualización es el puente entre la información y el entendimiento.
+          Transforma hojas de cálculo abstractas en historias claras que revelan
+          patrones y oportunidades.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105"
+          >
+            <div class="text-6xl mb-4">🧠</div>
+            <h3 class="text-xl font-bold mb-2" style="color: #00a0b0">
+              Acelera la Comprensión
+            </h3>
+            <p class="text-gray-600">
+              "Estas son cosas que nuestro cerebro procesa en milisegundos,
+              antes de que prestemos atención a todo lo demás."
+            </p>
+            <p class="text-xs text-gray-400 mt-2">
+              Fuente: The Big Book of Dashboards
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105"
+          >
+            <div class="text-6xl mb-4">👥</div>
+            <h3 class="text-xl font-bold mb-2" style="color: #eb6841">
+              Democratiza el Acceso
+            </h3>
+            <p class="text-gray-600">
+              Transforma datos crudos en un lenguaje visual e intuitivo que
+              cualquier público interesado puede entender y discutir.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105"
+          >
+            <div class="text-6xl mb-4">🚀</div>
+            <h3 class="text-xl font-bold mb-2" style="color: #cc333f">
+              Impulsa la Acción
+            </h3>
+            <p class="text-gray-600">
+              Convierte los hallazgos (insights) en decisiones de negocio
+              estratégicas y bien fundamentadas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="como" class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          ¿Cómo Visualizarlos? La Guía Definitiva
+        </h2>
+
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+          <h3 class="text-2xl font-bold mb-6 text-center">
+            <span class="text-gray-400 font-normal">Paso 1:</span> Entiende tus
+            Datos
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div class="text-5xl mb-2">🏷️</div>
+              <h4 class="font-bold text-lg">Categóricos</h4>
+              <p class="text-gray-600 text-sm">
+                "Representan cosas; etiquetas mutuamente excluyentes sin valor
+                numérico." (Ej: Productos, Ciudades).
+              </p>
+            </div>
+            <div>
+              <div class="text-5xl mb-2">🏅</div>
+              <h4 class="font-bold text-lg">Ordinales</h4>
+              <p class="text-gray-600 text-sm">
+                Categorías con un orden claro. (Ej: Nivel educativo, rango
+                salarial, nivel de satisfacción).
+              </p>
+            </div>
+            <div>
+              <div class="text-5xl mb-2">🔢</div>
+              <h4 class="font-bold text-lg">Cuantitativos</h4>
+              <p class="text-gray-600 text-sm">
+                Números que se pueden medir y sumar. (Ej: Ventas, Temperatura).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+          <h3 class="text-2xl font-bold mb-6 text-center">
+            <span class="text-gray-400 font-normal">Paso 2:</span> Guía la
+            Mirada con Atributos de Preatención
+          </h3>
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-1/2">
+              <p class="text-gray-600 mb-4">
+                Son señales visuales que nuestro cerebro procesa
+                instantáneamente para dirigir la atención a lo más importante
+                sin esfuerzo consciente.
+              </p>
+              <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li>
+                  <span class="font-semibold">Posición:</span> Dónde está un
+                  elemento en un eje.
+                </li>
+                <li>
+                  <span class="font-semibold">Color:</span> Tono e intensidad
+                  para resaltar.
+                </li>
+                <li>
+                  <span class="font-semibold">Longitud y Tamaño:</span> Qué tan
+                  largo o grande es.
+                </li>
+                <li>
+                  <span class="font-semibold">Forma:</span> Símbolos para
+                  categorizar.
+                </li>
+                <li>
+                  <span class="font-semibold">Orientación:</span> La dirección o
+                  pendiente.
+                </li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-3">
+                ...entre otros como curvatura, agrupamiento y más.
+              </p>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center items-center">
+              <div class="grid grid-cols-8 gap-2">
+                <script>
+                  for (let i = 0; i < 48; i++) {
+                    if (i === 27) {
+                      document.write(
+                        '<div class="w-6 h-6 rounded-full" style="background-color: #CC333F;"></div>'
+                      );
+                    } else {
+                      document.write(
+                        '<div class="w-6 h-6 rounded-full bg-gray-200"></div>'
+                      );
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+          <h3 class="text-2xl font-bold mb-10 text-center">
+            <span class="text-gray-400 font-normal">Paso 3:</span> Elige el
+            Gráfico Perfecto para tu Historia
+          </h3>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div>
+              <h4 class="font-bold text-lg text-center mb-2">
+                Para Comparar: Gráfico de Barras
+              </h4>
+              <p class="text-sm text-gray-600 text-center mb-4">
+                Compara valores entre diferentes categorías de forma clara.
+              </p>
+              <div class="chart-container"><canvas id="barChart"></canvas></div>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg text-center mb-2">
+                Para Ver Tendencias: Gráfico de Líneas
+              </h4>
+              <p class="text-sm text-gray-600 text-center mb-4">
+                Muestra la evolución de una variable a lo largo del tiempo.
+              </p>
+              <div class="chart-container">
+                <canvas id="lineChart"></canvas>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg text-center mb-2">
+                Para Ver Relaciones: Gráfico de Dispersión
+              </h4>
+              <p class="text-sm text-gray-600 text-center mb-4">
+                Muestra la relación y posible correlación entre dos variables.
+              </p>
+              <div class="chart-container">
+                <canvas id="scatterChart"></canvas>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg text-center mb-2">
+                Para Comparar con Metas: Gráfico de Bala
+              </h4>
+              <p class="text-sm text-gray-600 text-center mb-4">
+                Evalúa el rendimiento de una métrica contra un objetivo.
+              </p>
+              <div class="p-4 space-y-5">
+                <div class="w-full">
+                  <span class="text-sm font-semibold">Ingresos (en miles)</span>
+                  <div
+                    class="relative h-6 w-full rounded-full overflow-hidden bg-gray-200 flex"
+                  >
+                    <div
+                      class="bullet-range-light h-full"
+                      style="width: 60%"
+                    ></div>
+                    <div
+                      class="bullet-range-medium h-full"
+                      style="width: 25%"
+                    ></div>
+                    <div
+                      class="bullet-range-dark h-full"
+                      style="width: 15%"
+                    ></div>
+                    <div
+                      class="absolute top-0 left-0 h-full rounded-full bullet-bar"
+                      style="width: 78%; height: 60%; top: 20%"
+                    ></div>
+                    <div
+                      class="absolute top-0 h-full w-1 bullet-target"
+                      style="left: 85%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <span class="text-sm font-semibold"
+                    >Satisfacción del Cliente (%)</span
+                  >
+                  <div
+                    class="relative h-6 w-full rounded-full overflow-hidden bg-gray-200 flex"
+                  >
+                    <div
+                      class="bullet-range-light h-full"
+                      style="width: 50%"
+                    ></div>
+                    <div
+                      class="bullet-range-medium h-full"
+                      style="width: 30%"
+                    ></div>
+                    <div
+                      class="bullet-range-dark h-full"
+                      style="width: 20%"
+                    ></div>
+                    <div
+                      class="absolute top-0 left-0 h-full rounded-full bullet-bar"
+                      style="width: 92%; height: 60%; top: 20%"
+                    ></div>
+                    <div
+                      class="absolute top-0 h-full w-1 bullet-target"
+                      style="left: 90%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 border-t pt-8">
+            <h4 class="font-bold text-lg text-center mb-4">
+              Otros Gráficos Esenciales
+            </h4>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-center"
+            >
+              <div class="p-4 rounded-lg bg-gray-100">
+                <h5 class="font-semibold">Mapas</h5>
+                <p class="text-xs text-gray-600">
+                  Para visualizar datos geográficos (Coropléticos, de Símbolos).
+                </p>
+              </div>
+              <div class="p-4 rounded-lg bg-gray-100">
+                <h5 class="font-semibold">Tablas</h5>
+                <p class="text-xs text-gray-600">
+                  Para mostrar valores exactos y datos detallados.
+                </p>
+              </div>
+              <div class="p-4 rounded-lg bg-gray-100">
+                <h5 class="font-semibold">Dot Plots</h5>
+                <p class="text-xs text-gray-600">
+                  Para comparar valores a través de múltiples categorías.
+                </p>
+              </div>
+              <div class="p-4 rounded-lg bg-gray-100">
+                <h5 class="font-semibold">Highlight Tables</h5>
+                <p class="text-xs text-gray-600">
+                  Tablas con color para resaltar patrones y valores.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+          <h3 class="text-2xl font-bold mb-8 text-center">
+            <span class="text-gray-400 font-normal">Paso 4:</span> Usa el Color
+            con Intención
+          </h3>
+          <div class="space-y-6">
+            <div class="flex items-center">
+              <span class="font-bold w-28">SECUENCIAL</span>
+              <div class="flex-1 h-6 flex rounded-md overflow-hidden">
+                <div
+                  class="h-full w-full"
+                  style="background-color: #d1e5f0"
+                ></div>
+                <div
+                  class="h-full w-full"
+                  style="background-color: #92c5de"
+                ></div>
+                <div
+                  class="h-full w-full"
+                  style="background-color: #4393c3"
+                ></div>
+                <div
+                  class="h-full w-full"
+                  style="background-color: #2166ac"
+                ></div>
+                <div
+                  class="h-full w-full"
+                  style="background-color: #053061"
+                ></div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <span class="font-bold w-28">DIVERGENTE</span>
+              <div class="flex-1 h-6 flex rounded-md overflow-hidden">
+                <div
+                  class="h-full w-full"
+                  style="background-color: #cc333f"
+                ></div>
+                <div
+                  class="h-full w-full"
+                  style="background-color: #fddbc7"
+                ></div>
+                <div class="h-full w-full bg-gray-100"></div>
+                <div
+                  class="h-full w-full"
+                  style="background-color: #d1e5f0"
+                ></div>
+                <div
+                  class="h-full w-full"
+                  style="background-color: #00a0b0"
+                ></div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <span class="font-bold w-28">CATEGÓRICO</span>
+              <div class="flex-1 h-6 flex rounded-md overflow-hidden">
+                <div
+                  class="h-full w-full"
+                  style="background-color: #00a0b0"
+                ></div>
+                <div
+                  class="h-full w-full"
+                  style="background-color: #cc333f"
+                ></div>
+                <div
+                  class="h-full w-full"
+                  style="background-color: #eb6841"
+                ></div>
+                <div
+                  class="h-full w-full"
+                  style="background-color: #edc951"
+                ></div>
+                <div
+                  class="h-full w-full"
+                  style="background-color: #6a4a3c"
+                ></div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <span class="font-bold w-28">DE REALCE</span>
+              <div class="flex-1 h-6 flex rounded-md overflow-hidden space-x-1">
+                <div class="h-full w-full rounded-sm bg-gray-200"></div>
+                <div class="h-full w-full rounded-sm bg-gray-200"></div>
+                <div
+                  class="h-full w-full rounded-sm"
+                  style="background-color: #00a0b0"
+                ></div>
+                <div class="h-full w-full rounded-sm bg-gray-200"></div>
+                <div class="h-full w-full rounded-sm bg-gray-200"></div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <span class="font-bold w-28">DE ALERTA</span>
+              <div class="flex-1 h-6 flex rounded-md overflow-hidden space-x-1">
+                <div class="h-full w-full rounded-sm bg-gray-200"></div>
+                <div
+                  class="h-full w-full rounded-sm"
+                  style="background-color: #cc333f"
+                ></div>
+                <div class="h-full w-full rounded-sm bg-gray-200"></div>
+                <div class="h-full w-full rounded-sm bg-gray-200"></div>
+                <div class="h-full w-full rounded-sm bg-gray-200"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-8 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-r-lg"
+          >
+            <p class="font-bold">💡 Tip de Accesibilidad</p>
+            <p>
+              Aproximadamente el 8% de los hombres y el 0.4% de las mujeres
+              tienen deficiencia de visión de color (CVD). Evita combinar rojo y
+              verde.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="vendors" class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">
+          <a
+            href="https://www.gartner.com/en/documents/4012759"
+            target="_blank"
+            class="hover:underline"
+            title="Ver reporte de Gartner"
+            >Top 3 de Líderes en Business Intelligence (Gartner 2022)</a
+          >
+        </h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          Estas plataformas dominan el mercado al combinar una visión innovadora
+          con una sólida capacidad de ejecución, facilitando el análisis de
+          datos a escala empresarial.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105"
+          >
+            <h3 class="text-2xl font-bold mb-2">Microsoft</h3>
+            <p class="text-gray-500 mb-4">(Power BI)</p>
+            <p class="text-gray-600">
+              Líder por su masiva adopción, potente integración con Office 365 y
+              una inmejorable relación valor/precio.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105"
+          >
+            <h3 class="text-2xl font-bold mb-2">Salesforce</h3>
+            <p class="text-gray-500 mb-4">(Tableau)</p>
+            <p class="text-gray-600">
+              Destaca por su enfoque en el usuario de negocio, su exploración
+              visual intuitiva y una comunidad de fans muy activa.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105"
+          >
+            <h3 class="text-2xl font-bold mb-2">Qlik</h3>
+            <p class="text-gray-500 mb-4">(Qlik Sense)</p>
+            <p class="text-gray-600">
+              Reconocido por su flexibilidad de despliegue y su visión
+              innovadora en analítica aumentada.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <h4 class="font-bold text-lg text-center mb-2">
+            Posicionamiento en el Cuadrante Mágico
+          </h4>
+          <p class="text-sm text-gray-600 text-center mb-4">
+            Comparación de los líderes basada en "Capacidad de Ejecución" y
+            "Visión Completa".
+          </p>
+          <div class="chart-container" style="height: 400px; max-height: 500px">
+            <canvas id="bubbleChart"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white mt-20">
+      <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+        <p class="font-bold text-lg mb-2">
+          Una buena visualización no solo muestra datos, cuenta una historia que
+          impulsa el cambio.
+        </p>
+        <p class="text-sm">Autor: Ing. Jonathan Javier Monsalve Giraldo</p>
+        <p class="text-xs mt-1">
+          Infografía interactiva creada para la Actividad 1 de Visualización de
+          Datos.
+        </p>
+        <div class="mt-8 border-t pt-6">
+          <h4 class="font-semibold text-sm mb-2">Referencias</h4>
+          <div class="text-xs text-gray-500">
+            <p>
+              Wexler, S., Shaffer, J., & Cotgreave, A. (2017). The big book of
+              dashboards: visualizing your data using real-world business
+              scenarios. Wiley.
+            </p>
+            <p>
+              Gartner, Inc. (2022). Magic Quadrant for Analytics and Business
+              Intelligence Platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const energeticPlayfulPalette = [
+          "#00A0B0",
+          "#EB6841",
+          "#CC333F",
+          "#EDC951",
+          "#6A4A3C",
+        ];
+
+        const wrapLabel = (label) => {
+          const max_width = 16;
+          if (label.length <= max_width) return label;
+          const words = label.split(" ");
+          const lines = [];
+          let currentLine = "";
+          for (const word of words) {
+            if (
+              (currentLine + " " + word).length > max_width &&
+              currentLine.length > 0
+            ) {
+              lines.push(currentLine);
+              currentLine = word;
+            } else {
+              currentLine = currentLine ? currentLine + " " + word : word;
+            }
+          }
+          if (currentLine) lines.push(currentLine);
+          return lines;
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+          const item = tooltipItems[0];
+          let label = item.chart.data.labels[item.dataIndex];
+          if (Array.isArray(label)) {
+            return label.join(" ");
+          }
+          return label;
+        };
+
+        const commonOptions = {
+          maintainAspectRatio: false,
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "bottom",
+            },
+            tooltip: {
+              callbacks: {
+                title: tooltipTitleCallback,
+              },
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                font: {
+                  family: "'Inter', sans-serif",
+                },
+              },
+            },
+            x: {
+              ticks: {
+                font: {
+                  family: "'Inter', sans-serif",
+                },
+              },
+            },
+          },
+        };
+
+        const initBarChart = () => {
+          const ctx = document.getElementById("barChart").getContext("2d");
+          new Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: [
+                "Electrónica",
+                "Hogar y Cocina",
+                "Ropa y Accesorios",
+                "Libros",
+              ],
+              datasets: [
+                {
+                  label: "Ventas por Categoría (en miles)",
+                  data: [120, 95, 78, 55],
+                  backgroundColor: energeticPlayfulPalette[0],
+                  borderColor: energeticPlayfulPalette[0] + "B3",
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: commonOptions,
+          });
+        };
+
+        const initLineChart = () => {
+          const ctx = document.getElementById("lineChart").getContext("2d");
+          new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"],
+              datasets: [
+                {
+                  label: "Usuarios Activos",
+                  data: [1500, 1800, 1750, 2100, 2300, 2200],
+                  borderColor: energeticPlayfulPalette[0],
+                  backgroundColor: energeticPlayfulPalette[0] + "33",
+                  tension: 0.3,
+                  fill: true,
+                },
+                {
+                  label: "Nuevos Registros",
+                  data: [300, 450, 400, 520, 580, 510],
+                  borderColor: energeticPlayfulPalette[1],
+                  backgroundColor: energeticPlayfulPalette[1] + "33",
+                  tension: 0.3,
+                  fill: true,
+                },
+              ],
+            },
+            options: commonOptions,
+          });
+        };
+
+        const initScatterChart = () => {
+          const ctx = document.getElementById("scatterChart").getContext("2d");
+          new Chart(ctx, {
+            type: "scatter",
+            data: {
+              datasets: [
+                {
+                  label: "Productos (Ventas vs. Ganancias)",
+                  data: [
+                    { x: 50, y: 8 },
+                    { x: 75, y: 12 },
+                    { x: 100, y: 18 },
+                    { x: 120, y: 25 },
+                    { x: 150, y: 32 },
+                    { x: 180, y: 39 },
+                    { x: 210, y: 45 },
+                    { x: 240, y: 55 },
+                    { x: 260, y: 60 },
+                    { x: 290, y: 70 },
+                    { x: 310, y: 68 },
+                  ],
+                  backgroundColor: energeticPlayfulPalette[1],
+                  pointRadius: 8,
+                  pointHoverRadius: 10,
+                  pointHitRadius: 12,
+                  pointBorderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              ...commonOptions,
+              scales: {
+                y: {
+                  ...commonOptions.scales.y,
+                  type: "linear",
+                  title: { display: true, text: "Ganancia (en miles)" },
+                },
+                x: {
+                  type: "linear",
+                  ticks: {
+                    font: { family: "'Inter', sans-serif" },
+                  },
+                  title: { display: true, text: "Ventas (en miles)" },
+                },
+              },
+            },
+          });
+        };
+
+        const initBubbleChart = () => {
+          const ctx = document.getElementById("bubbleChart").getContext("2d");
+          new Chart(ctx, {
+            type: "bubble",
+            data: {
+              datasets: [
+                {
+                  label: "Microsoft",
+                  data: [{ x: 77, y: 77, r: 15 }],
+                  backgroundColor: energeticPlayfulPalette[0] + "BF",
+                },
+                {
+                  label: "Salesforce (Tableau)",
+                  data: [{ x: 50, y: 65, r: 15 }],
+                  backgroundColor: energeticPlayfulPalette[1] + "BF",
+                },
+                {
+                  label: "Qlik",
+                  data: [{ x: 54, y: 56, r: 15 }],
+                  backgroundColor: energeticPlayfulPalette[2] + "BF",
+                },
+              ],
+            },
+            options: {
+              maintainAspectRatio: false,
+              responsive: true,
+              plugins: {
+                legend: {
+                  position: "bottom",
+                },
+              },
+              scales: {
+                y: {
+                  title: { display: true, text: "Ability to Execute" },
+                },
+                x: {
+                  title: { display: true, text: "Completeness of Vision" },
+                },
+              },
+            },
+          });
+        };
+
+        initBarChart();
+        initLineChart();
+        initScatterChart();
+        initBubbleChart();
+      });
+    </script>
+  </body>
+</html>
