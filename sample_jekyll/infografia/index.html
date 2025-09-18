@@ -530,14 +530,37 @@
           </div>
         </div>
       </section>
+
+      <section id="reflexion" class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">
+          Reflexión Personal
+        </h2>
+        <div class="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+          <p class="text-lg text-gray-700 italic leading-relaxed">
+            Al concluir este análisis, reafirmo que
+            <strong
+              >una buena visualización no solo muestra datos, cuenta una
+              historia que impulsa el cambio.</strong
+            >
+            Este ejercicio ha trascendido la simple selección de gráficos y
+            colores; me ha enseñado que cada decisión, desde elegir un gráfico
+            de barras sobre uno de líneas hasta la intencionalidad de un color
+            de alerta, es un acto de comunicación estratégica. Comprender a los
+            líderes del mercado como Microsoft o Salesforce no se trata solo de
+            conocer la herramienta, sino de entender cómo facilitan la creación
+            de estas narrativas a gran escala. La verdadera habilidad no reside
+            en dominar el software, sino en traducir la complejidad de los datos
+            en una historia clara, accesible y, sobre todo, convincente que
+            permita a cualquier persona tomar decisiones informadas. Es la
+            fusión del rigor analítico con el arte de contar historias lo que
+            verdaderamente genera impacto.
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-white mt-20">
       <div class="container mx-auto px-6 py-8 text-center text-gray-600">
-        <p class="font-bold text-lg mb-2">
-          Una buena visualización no solo muestra datos, cuenta una historia que
-          impulsa el cambio.
-        </p>
         <p class="text-sm">Autor: Ing. Jonathan Javier Monsalve Giraldo</p>
         <p class="text-xs mt-1">
           Infografía interactiva creada para la Actividad 1 de Visualización de
@@ -724,10 +747,8 @@
                   title: { display: true, text: "Ganancia (en miles)" },
                 },
                 x: {
+                  ...commonOptions.scales.x,
                   type: "linear",
-                  ticks: {
-                    font: { family: "'Inter', sans-serif" },
-                  },
                   title: { display: true, text: "Ventas (en miles)" },
                 },
               },
